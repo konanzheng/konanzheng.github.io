@@ -1,0 +1,16 @@
+title : konan's blog
+tagline: blank Tagline
+author :
+  name : konan Zheng
+  email : ruizhaozheng@gmail.comm
+  github : konanzheng
+  twitter : none
+  feedburner : none
+
+navigation :
+  - archive.html
+  - tags.html
+  - categories.html
+  - pages.html
+  - about.md
+  
