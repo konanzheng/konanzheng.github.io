@@ -2,12 +2,18 @@
 <rss version="2.0">  <channel>
     <title>konan&#39;s blog</title>
     <link>http://sample.com</link>
-    <pubDate>26 Jan 14 14:09 CST</pubDate>
+    <pubDate>26 Feb 14 17:05 CST</pubDate>
+    <item>
+      <title>基于websocket和netty的web即时通讯</title>
+      <link>http://sample.com/default/%E5%9F%BA%E4%BA%8Ewebsocket%E5%92%8Cnetty%E7%9A%84web%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/</link>
+      <pubDate>2014-02-26 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;现在新的浏览器逐步都支持websocket了，而项目上也已经有基于netty&lt;br /&gt;&#xA;的及时通讯所以想结合两者来实现web即时通讯.&lt;br /&gt;&#xA;目前项目上是使用flash与netty通信的但是有跨域的问题和flash支持的问题&lt;br /&gt;&#xA;增加webscoket协议之后可以将多种框架柔和到一起，在浏览器客户端上判断&lt;br /&gt;&#xA;是否支持websocket如果支持直接使用websocket，如果不支持再使用flash。&lt;br /&gt;&#xA;之前的业务逻辑代码是不能变的，但是flash调用js方法接口写死的所以需要&lt;br /&gt;&#xA;整合两种通信方式提供统一的业务接口。还要实现服务器端安全认证，防止非&lt;br /&gt;&#xA;正常数据交互&#xA;&lt;img src=&#34;/images/netty-websocket.png&#34; alt=&#34;xmind截图&#34;/&gt;&lt;br /&gt;&#xA;&lt;img src=&#34;/images/netty-websocket.png&#34; alt=&#34;xmind截图&#34; /&gt;&#xA;&lt;br /&gt;&#xA;&lt;a href=&#34;/filedownload/netty-websocket.xmind&#34;&gt;xmind图下载&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>goodday</title>
-      <link>http://sample.com/default/goodday/</link>
+      <link>http://sample.com/Gor/goodday/</link>
       <pubDate>2014-01-26 12:00:00 +0800</pubDate>
-      <description></description>
+      <description>&lt;h1&gt;第一次使用markdown写博客&lt;/h1&gt;&#xA;&#xA;&lt;p&gt;###大概了解一下markdown的语法就可以开工，同时开着网页一边学一边用&lt;/p&gt;&#xA;&#xA;&lt;p&gt;尝试使用了几次git命令，因为长期使用svn所以对git的有些操作还是很奇怪的&lt;/p&gt;&#xA;&#xA;&lt;p&gt;比如git add 和git commit，不明白为什每次都样先add所以查了下&lt;br /&gt;&#xA;&lt;a href=&#34;http://www.zhihu.com/question/19946553/&#34;&gt;知乎&lt;/a&gt;&#xA;&lt;strong&gt;觉得这个简单的命令背后是更深层次的设计理念&lt;/strong&gt;&#xA;&amp;gt; Linus在设计之初就希望git是一个小工具的集合体，它的每个组成部分应该是&lt;br /&gt;&#xA;&amp;gt; 一个高度的抽象，这样系统的设计符合Unix的简单、可组合的原则。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;记录下学习计划：&#xA;1. git命令和github这个平台&#xA;2. markdown语法&#xA;3. 知乎（各个方面的东西都很有趣，尤其是很多以前自己觉得别人肯定不会问的问题原来很多人都在问都在答）&lt;/p&gt;&#xA;&#xA;&lt;p&gt;列一个兴趣计划：&#xA;+ python 语言&#xA;+ head first设计模式&#xA;+ git 与svn 的对比&lt;/p&gt;&#xA;</description>
     </item>
     <item>
       <title>你的第一篇博客</title>
