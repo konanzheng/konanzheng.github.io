@@ -1,13 +1,19 @@
-<?xml version="1.0"?>
+<?xml version="1.0"  encoding="UTF-8"?>
 <rss version="2.0">  <channel>
     <title>konan&#39;s blog</title>
     <link>http://sample.com</link>
-    <pubDate>26 Feb 14 17:05 CST</pubDate>
+    <pubDate>16 Dec 14 11:29 CST</pubDate>
+    <item>
+      <title>整理下工具类的东西</title>
+      <link>http://sample.com/工具类 小东西/%E6%95%B4%E7%90%86%E4%B8%8B%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%B8%9C%E8%A5%BF/</link>
+      <pubDate>2014-12-16 12:00:00 +0800</pubDate>
+      <description>&lt;p&gt;好久没更新过个人博客了，就是懒。很多事情不论多大多小能坚持确实不容易，不过幸好自己感兴趣的时候就能稍微坚持下了。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;###目前已有的几个小工具总结一下&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&lt;a href=&#34;/tools/oacode/index.html&#34;&gt;组织机构代码号生成&lt;/a&gt;&lt;br /&gt;&#xA;&lt;a href=&#34;/tools/idcard/index.html&#34;&gt;18位身份证号码生成&lt;/a&gt;&lt;br /&gt;&#xA;&lt;a href=&#34;https://www.zybuluo.com/kevinZheng/note/55263&#34;&gt;java Web工程补丁导出工具1.0&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>基于websocket和netty的web即时通讯</title>
       <link>http://sample.com/default/%E5%9F%BA%E4%BA%8Ewebsocket%E5%92%8Cnetty%E7%9A%84web%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/</link>
       <pubDate>2014-02-26 12:00:00 +0800</pubDate>
-      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;现在新的浏览器逐步都支持websocket了，而项目上也已经有基于netty&lt;br /&gt;&#xA;的及时通讯所以想结合两者来实现web即时通讯.&lt;br /&gt;&#xA;目前项目上是使用flash与netty通信的但是有跨域的问题和flash支持的问题&lt;br /&gt;&#xA;增加webscoket协议之后可以将多种框架柔和到一起，在浏览器客户端上判断&lt;br /&gt;&#xA;是否支持websocket如果支持直接使用websocket，如果不支持再使用flash。&lt;br /&gt;&#xA;之前的业务逻辑代码是不能变的，但是flash调用js方法接口写死的所以需要&lt;br /&gt;&#xA;整合两种通信方式提供统一的业务接口。还要实现服务器端安全认证，防止非&lt;br /&gt;&#xA;正常数据交互&#xA;&lt;img src=&#34;/images/netty-websocket.png&#34; alt=&#34;xmind截图&#34;/&gt;&lt;br /&gt;&#xA;&lt;img src=&#34;/images/netty-websocket.png&#34; alt=&#34;xmind截图&#34; /&gt;&#xA;&lt;br /&gt;&#xA;&lt;a href=&#34;/filedownload/netty-websocket.xmind&#34;&gt;xmind图下载&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;现在新的浏览器逐步都支持websocket了，而项目上也已经有基于netty&lt;br /&gt;&#xA;的及时通讯所以想结合两者来实现web即时通讯.&lt;br /&gt;&#xA;目前项目上是使用flash与netty通信的但是有跨域的问题和flash支持的问题&lt;br /&gt;&#xA;增加webscoket协议之后可以将多种框架柔和到一起，在浏览器客户端上判断&lt;br /&gt;&#xA;是否支持websocket如果支持直接使用websocket，如果不支持再使用flash。&lt;br /&gt;&#xA;之前的业务逻辑代码是不能变的，但是flash调用js方法接口写死的所以需要&lt;br /&gt;&#xA;整合两种通信方式提供统一的业务接口。还要实现服务器端安全认证，防止非&lt;br /&gt;&#xA;正常数据交互&#xA;&lt;img src=&#34;/images/netty-websocket.png&#34; alt=&#34;xmind截图&#34; width=&#34;950&#34; height=&#34;668&#34;/&gt;&lt;br /&gt;&#xA;&lt;a href=&#34;/filedownload/netty-websocket.xmind&#34;&gt;xmind图下载&lt;/a&gt;&lt;/p&gt;&#xA;</description>
     </item>
     <item>
       <title>goodday</title>

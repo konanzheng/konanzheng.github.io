@@ -4,6 +4,11 @@
 		<loc>http://sample.com/</loc>
 	</url>
 	<url>
+		<loc>http://sample.com/工具类 小东西/%E6%95%B4%E7%90%86%E4%B8%8B%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
+		<lastmod>2014-12-16</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
 		<loc>http://sample.com/default/%E5%9F%BA%E4%BA%8Ewebsocket%E5%92%8Cnetty%E7%9A%84web%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/</loc>
 		<lastmod>2014-02-26</lastmod>
 		<changefreq>weekly</changefreq>
