@@ -1,10 +1,11 @@
  <html  xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
  <head>
  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap-theme.css" rel="stylesheet" />
+<link href="../css/datepicker.css" rel="stylesheet" />
+<link href="http://cdn.bootcss.com/select2/3.5.2/select2.css" rel="stylesheet">
  <style>
- .btn_2k3 {
- BORDER-RIGHT: #002D96 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #002D96 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#9DBCEA); BORDER-LEFT: #002D96 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #002D96 1px solid
- }
+ 
  </style>
     <script>
         var stringcode="1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
@@ -96,26 +97,17 @@
  </head>
     <body>
       <p align="center">组织机构代码号生成器</p>
-      <table border="1">
-         
-          <tr>
-           <td bgcolor="#CCFFCC" width="120" nowrap="nowrap">
-                <input type="hidden" value="0" id="xh" value="xh" />
-                <ul id="lsjl" style="width:150px;height:300px;align:right;">
-                  
-                </ul>
-           </td>
-           <td bgcolor="#FFE4C4">
-                          个数：<input type="textField" id="count" style="width:78px" value="1"/><br><br>
+                       个数：<input type="textField" id="count" style="width:78px" value="1"/><br><br>
                      尾号：<select style="width:80px"  name="dmh" id="dmh" value="" ></select><br>
                           <input type="checkBox" id="codefoot" onclick="return changeCodeFoot();"  />不包含字母
-               <br><br><input type="button" class="btn_2k3" value="指定尾号" onclick="scdmh(1);" />
-                  
-                <br><br><input type="button" class="btn_2k3" value="随机生成" onclick="scdmh(0);" />
-                   <br><br><input type="button" class="btn_2k3" value="清空所有" onclick="clearAll();" />
-           </td>
-           </tr>
-      </table>
+               <br>
+               	<input type="button" class="btn-default"value="指定尾号" onclick="scdmh(1);" />&nbsp;
+                  <input type="button" class="btn-default" value="随机生成" onclick="scdmh(0);" />&nbsp;
+                   <input type="button" class="btn-default" value="清空所有" onclick="clearAll();" />&nbsp;
+                   <p>
+                    <input type="hidden" value="0" id="xh" value="xh" />
+                <ul id="lsjl" style="width:150px;height:300px;align:right;"></ul>
+                   </p>
     </body>
     <script language="javascript">
     var selObj=document.getElementById("dmh");
