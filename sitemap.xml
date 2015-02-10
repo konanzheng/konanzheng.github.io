@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://sample.com/</loc>
+		<loc>http://konanzheng.github.io/</loc>
 	</url>
 	<url>
-		<loc>http://sample.com/工具类 小东西/%E6%95%B4%E7%90%86%E4%B8%8B%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
+		<loc>http://konanzheng.github.io/default/love/</loc>
+		<lastmod>2015-02-10</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>http://konanzheng.github.io/工具类 小东西/%E6%95%B4%E7%90%86%E4%B8%8B%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
 		<lastmod>2014-12-16</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://sample.com/default/%E5%9F%BA%E4%BA%8Ewebsocket%E5%92%8Cnetty%E7%9A%84web%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/</loc>
+		<loc>http://konanzheng.github.io/default/%E5%9F%BA%E4%BA%8Ewebsocket%E5%92%8Cnetty%E7%9A%84web%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/</loc>
 		<lastmod>2014-02-26</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://sample.com/Gor/goodday/</loc>
+		<loc>http://konanzheng.github.io/Gor/goodday/</loc>
 		<lastmod>2014-01-26</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>http://sample.com/2013/new-born.html</loc>
+		<loc>http://konanzheng.github.io/2013/new-born.html</loc>
 		<lastmod>2013-02-08</lastmod>
 		<changefreq>weekly</changefreq>
 	</url>
