@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tools," />
+  <meta name="keywords" content="tools,java,patch,eclipse,web,class," />
 
 
 
@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="kevinzheng's 博客">
 <meta property="og:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
 ###实现方式最初考虑">
-<meta property="og:updated_time" content="2016-04-22T15:00:28.000Z">
+<meta property="og:updated_time" content="2016-04-22T16:13:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jeePatchExp补丁导出1.0">
 <meta name="twitter:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
@@ -324,7 +324,7 @@ public void expResource(){
     if(resource_loc!=null&amp;&amp;resource_loc.contains(constants_WEBCONTENT)){
         String desc_temp=resource_loc.substring(resource_loc.indexOf(constants_WEBCONTENT));
         desc=desc_temp.replace(constants_WEBCONTENT, expFolder+File.separatorChar+project_name);
-        makFIleDirs(desc.replace(rName, &quot;&quot;)); 
+        makFIleDirs(desc.replace(rName, &quot;&quot;));
         copyResource(src,desc);
     }
     if(resource_name!=null&amp;&amp;resource_name.endsWith(constants_JAVAFILE)){
@@ -335,7 +335,7 @@ public void expResource(){
         src=project_loc+File.separatorChar+constants_WEBCONTENT+src_temp;
         desc=expFolder+File.separatorChar+project_name+src_temp;
         rName=resource_name.replace(constants_JAVAFILE, constants_CLASSFILE);
-        makFIleDirs(desc.replace(rName, &quot;&quot;)); 
+        makFIleDirs(desc.replace(rName, &quot;&quot;));
         expInnerClass(src, desc, rName);
         copyResource(src,desc);
     }
@@ -363,7 +363,7 @@ public void expInnerClass(String src,String desc,String rName){
 <p>####字符串分割替换<br>替换资源路径字符串时候遇到的问题就是windows 下的路径比如<code>c:\\somethingA\\somethingB\\somethingC</code> 替换的时候不能根据<code>File.separatorChar</code> 直接分割替换，需要用四个反斜杠<code>“\\\\”</code>这一点需要注意。</p>
 <p>####可执行jar<br>window下eclipse外部工具指定jar文件直接作为可执行文件会报错，当时想到的方案是手动写个批处理，将eclipse传递出来的参数再传递给main函数即<code>java -jar jeePatchExp.jar %1 %2 %3 %4 %5</code> 这样。后来经过实验发现在windows下修改jar文件的默认打开方式改成java.exe就好了</p>
 <hr>
-<p>###详细内容及下载<br>具体配置使用方法及详细代码： <a href="https://github.com/konanzheng/jeePatchExpTool" target="_blank" rel="external"> <i class="icon-github"></i>前往查看</a> </p>
+<p>###详细内容及下载<br>具体配置使用方法及详细代码： <a href="https://github.com/konanzheng/jeePatchExpTool" target="_blank" rel="external"> <i class="icon-github"></i>前往查看</a></p>
 <p>编译好的jar包： <a href="http://konanzheng.github.io/filedownload/jeePatchExp.jar" target="_blank" rel="external"> <i class="icon-download-alt"></i>点击下载</a></p>
 <hr>
 <p>eclipse外部工具: Eclipse外部工具:就是调试、运行工具按钮旁边那个运行工具箱图标里面操作的东东，可以定义如何调用外部程序</p>
@@ -389,6 +389,16 @@ public void expInnerClass(String src,String desc,String rName){
         <div class="post-tags">
           
             <a href="/tags/tools/" rel="tag">#tools</a>
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+            <a href="/tags/patch/" rel="tag">#patch</a>
+          
+            <a href="/tags/eclipse/" rel="tag">#eclipse</a>
+          
+            <a href="/tags/web/" rel="tag">#web</a>
+          
+            <a href="/tags/class/" rel="tag">#class</a>
           
         </div>
       
@@ -492,7 +502,7 @@ public void expInnerClass(String src,String desc,String rName){
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
