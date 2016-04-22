@@ -1,0 +1,65 @@
+
+<html  xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap-theme.css" rel="stylesheet" />
+<link href="../css/datepicker.css" rel="stylesheet" />
+<link href="http://cdn.bootcss.com/select2/3.5.2/select2.css" rel="stylesheet">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="../script/bootstrap-datepicker.js"></script>
+<script src="../script/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script src="http://cdn.bootcss.com/select2/3.5.2/select2.js"></script>
+<script src="../script/data.js" charset="UTF-8"></script>
+<script src="../script/idCode.js" charset="UTF-8"></script>
+ <style>
+            .datepicker {
+                /* Appended to body, abs-pos off the page */
+                position: absolute;
+                display: none;
+                top: -9999em;
+                left: -9999em;
+            }
+        </style>
+<script >
+$(document).ready(function(){
+  $('#csrq').datepicker({
+   language : 'zh-CN'	
+  });
+  $("#szdq").select2({data:getIdCardSzdOptionData()});
+});
+function generate(){
+	var szdqCode=$("#szdq").val();
+	var birthDate=$("#csrq").val();
+	var sex=$("#sex").val();
+	//所在地区 出生日期 性别
+	if(!szdqCode){
+	    szdqCode="110000";
+	}if(!birthDate){
+	    birthDate="19900222";
+	}else{
+	    birthDate=birthDate.replace('年','').replace('月','').replace('日','');
+	}
+	$("#idcard").append(idCardGenerate(szdqCode,birthDate,sex)+"      <br>");
+}
+</script>
+</head>
+<body>
+<input type="text" id="idcardcheck" />
+<input type=button value="校验" class="btn-default" onclick="alert(checkIdCard18($('#idcardcheck').val()))"></input>
+<br>
+选择地区:
+<input type="hidden" id="szdq" style="width:180px"/><br>
+选择日期:
+<input type="text"  value="" id="csrq" ><br>
+<br>性别:
+		 <select id="sex">
+		 <option value="0">男</option>
+		 <option value="1">女</option>
+		 </select> &nbsp;&nbsp;<input type="button" onclick="generate()" class="btn-default"  value="生成" />
+<br>
+<p>
+<span id="idcard">	 </span>
+</p>
+</body>
+</html>
