@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="tools," />
 
 
 
@@ -80,15 +80,19 @@
 
 
 
-<meta name="description" content="世上只有2种人，懂二进制的和不懂得">
-<meta property="og:type" content="website">
-<meta property="og:title" content="kevinzheng's 博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
+###实现方式最初考虑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jeePatchExp补丁导出1.0">
+<meta property="og:url" content="http://yoursite.com/2015/07/04/jeePatchExp/index.html">
 <meta property="og:site_name" content="kevinzheng's 博客">
-<meta property="og:description" content="世上只有2种人，懂二进制的和不懂得">
+<meta property="og:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
+###实现方式最初考虑">
+<meta property="og:updated_time" content="2016-04-22T15:00:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kevinzheng's 博客">
-<meta name="twitter:description" content="世上只有2种人，懂二进制的和不懂得">
+<meta name="twitter:title" content="jeePatchExp补丁导出1.0">
+<meta name="twitter:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
+###实现方式最初考虑">
 
 
 
@@ -106,7 +110,7 @@
   };
 </script>
 
-  <title> kevinzheng's 博客 </title>
+  <title> jeePatchExp补丁导出1.0 | kevinzheng's 博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -127,9 +131,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -206,9 +208,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -228,10 +230,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2015/07/04/jeePatchExp/" itemprop="url">
-                  jeePatchExp补丁导出1.0
-                </a>
+                jeePatchExp补丁导出1.0
               
             
           </h1>
@@ -297,9 +296,7 @@
       
 
       
-        
-          
-            <p>###背景介绍<br>java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  </p>
+        <p>###背景介绍<br>java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  </p>
 <p>###实现方式<br>最初考虑使用脚本实现，但是脚本不能跨平台而且我只会最简单的脚本处理复杂的字符串不擅长。索性就用擅长的java写这个工具了。整体想法就是做一个可执行的jar 供eclipse 外部工具调用 。</p>
 <pre><code class="flow">st=&gt;start: Start
 io=&gt;inputoutput: 选择资源
@@ -372,161 +369,57 @@ public void expInnerClass(String src,String desc,String rName){
 <p>eclipse外部工具: Eclipse外部工具:就是调试、运行工具按钮旁边那个运行工具箱图标里面操作的东东，可以定义如何调用外部程序</p>
 <p>create patch功能:创建补丁说明文件:需要使用svn 插件，先同步资源，然后选择资源文件点击右键-&gt;create Patch 选择保存到工作空间项目下面</p>
 
-          
-        
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/04/tools-list/" itemprop="url">
-                  tools list
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-04T13:24:19+08:00" content="2015-07-04">
-              2015-07-04
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">tools</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/04/tools-list/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/tools-list/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/tools/" rel="tag">#tools</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>工具列表</p>
-<ol>
-<li>组织机构代码好校验和生成工具  <a href="/tools/oacode/index.html">地址</a></li>
-<li>18位身份证号校验及生成工具 <a href="/tools/idcard/index.html">地址</a></li>
-<li>java Web工程补丁导出工具1.0 <a href="/2015/07/04/jeePatchExp/">本站地址</a>   <a href="https://www.zybuluo.com/kevinZheng/note/55263" target="_blank" rel="external">作业部落地址</a> </li>
-</ol>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/04/tools-list/" rel="next" title="tools list">
+                <i class="fa fa-chevron-left"></i> tools list
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -534,6 +427,14 @@ public void expInnerClass(String src,String desc,String rName){
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/07/04/jeePatchExp/"
+           data-title="jeePatchExp补丁导出1.0" data-url="http://yoursite.com/2015/07/04/jeePatchExp/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -553,8 +454,17 @@ public void expInnerClass(String src,String desc,String rName){
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif"
@@ -604,6 +514,17 @@ public void expInnerClass(String src,String desc,String rName){
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -700,6 +621,10 @@ public void expInnerClass(String src,String desc,String rName){
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
