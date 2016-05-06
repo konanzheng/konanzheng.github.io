@@ -87,12 +87,12 @@ weblogic 测试服务器
 maven 私服
 jenkins 持续继承构建服务
 
-##weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
+weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
 
 生存wlfullclient.jar 
 了解一下weblogic.Deployer命令
 
-wlfullclient.jar生成方式是,">
+wlfullclient.jar生成方式是,进入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jenkins-weblogic">
 <meta property="og:url" content="http://yoursite.com/2016/05/05/jenkins-weblogic/index.html">
@@ -104,13 +104,13 @@ weblogic 测试服务器
 maven 私服
 jenkins 持续继承构建服务
 
-##weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
+weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
 
 生存wlfullclient.jar 
 了解一下weblogic.Deployer命令
 
-wlfullclient.jar生成方式是,">
-<meta property="og:updated_time" content="2016-05-06T01:05:15.539Z">
+wlfullclient.jar生成方式是,进入">
+<meta property="og:updated_time" content="2016-05-06T01:08:16.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jenkins-weblogic">
 <meta name="twitter:description" content="java web项目 团队开发过程中使用持续集成来运行重复的工作解放劳动力
@@ -120,12 +120,12 @@ weblogic 测试服务器
 maven 私服
 jenkins 持续继承构建服务
 
-##weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
+weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
 
 生存wlfullclient.jar 
 了解一下weblogic.Deployer命令
 
-wlfullclient.jar生成方式是,">
+wlfullclient.jar生成方式是,进入">
 
 
 
@@ -316,22 +316,17 @@ wlfullclient.jar生成方式是,">
 <li>maven 私服</li>
 <li>jenkins 持续继承构建服务</li>
 </ol>
-<p>##weblogic 测试服务器<br>建域 启动什么的都不说了，重点记一下远程发布</p>
+<h2 id="weblogic-测试服务器"><a href="#weblogic-测试服务器" class="headerlink" title="weblogic 测试服务器"></a>weblogic 测试服务器</h2><p>建域 启动什么的都不说了，重点记一下远程发布</p>
 <ol>
 <li>生存wlfullclient.jar </li>
 <li>了解一下weblogic.Deployer命令</li>
 </ol>
 <p>wlfullclient.jar生成方式是,进入weblogic的安装目录例如/u01/Oracle/Middleware/wlserver_10.3/server/lib,<br>运行<strong>java -jar wljarbuilder.jar</strong><br>就能生成wlfullclient.jar文件 ,然后拷贝到jenkins 部署的机器上后面会用到</p>
-<p>###查看weblogic.Deployer例子</p>
-<pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -examples
-</code></pre><p>###eblogic.Deployer卸载某个web应用</p>
-<pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -name demo01 -targets AdminServer -adminurl t3://10.100.202.163:7001 -username weblogic -password weblogic# -undeploy
-</code></pre><p>###weblogic.Deployer部署web应用</p>
-<pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -debug -stage -remote -verbose -upload -name demo01 -targets AdminServer -adminurl t3://10.100.202.163:7001 -username weblogic -password weblogic# -deploy demo01.war
-</code></pre><p>###带上版本号 可以不停应用的同时部署</p>
-<p><strong>-appversion</strong><br>经过试用，发现-deploy最多支持两个版本的存在继续发布就报错了，没找到设置的地方而且不能自动删除之前的版本 感觉不太实用,还是用 <code>-redeploy</code> 命令</p>
-<p>##maven私服</p>
-<p>网上下载最新的nexus 解压运行<br>跟据项目pom.xml 中设置对应的repositiories 即可<br>配置setting.xml</p>
+<h3 id="查看weblogic-Deployer例子"><a href="#查看weblogic-Deployer例子" class="headerlink" title="查看weblogic.Deployer例子"></a>查看weblogic.Deployer例子</h3><pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -examples
+</code></pre><h3 id="weblogic-Deployer卸载某个web应用"><a href="#weblogic-Deployer卸载某个web应用" class="headerlink" title="weblogic.Deployer卸载某个web应用"></a>weblogic.Deployer卸载某个web应用</h3><pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -name demo01 -targets AdminServer -adminurl t3://10.100.202.163:7001 -username weblogic -password weblogic# -undeploy
+</code></pre><h3 id="weblogic-Deployer部署web应用"><a href="#weblogic-Deployer部署web应用" class="headerlink" title="weblogic.Deployer部署web应用"></a>weblogic.Deployer部署web应用</h3><pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -debug -stage -remote -verbose -upload -name demo01 -targets AdminServer -adminurl t3://10.100.202.163:7001 -username weblogic -password weblogic# -deploy demo01.war
+</code></pre><h3 id="带上版本号-可以不停应用的同时部署"><a href="#带上版本号-可以不停应用的同时部署" class="headerlink" title="带上版本号 可以不停应用的同时部署"></a>带上版本号 可以不停应用的同时部署</h3><p><strong>-appversion</strong><br>经过试用，发现-deploy最多支持两个版本的存在继续发布就报错了，没找到设置的地方而且不能自动删除之前的版本 感觉不太实用,还是用 <code>-redeploy</code> 命令</p>
+<h2 id="maven私服"><a href="#maven私服" class="headerlink" title="maven私服"></a>maven私服</h2><p>网上下载最新的nexus 解压运行<br>跟据项目pom.xml 中设置对应的repositiories 即可<br>配置setting.xml</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.1.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd&quot;&gt;
     &lt;mirrors&gt;
@@ -366,18 +361,15 @@ wlfullclient.jar生成方式是,">
     &lt;/servers&gt;
 &lt;/settings&gt;
 </code></pre><p>主要是配置私服代理，和发布用的server信息，配好能同步更新依赖jar包就ok 了</p>
-<p>##jenkins 持续继承构建服务</p>
-<p>下载最新的war包 扔到tomcat webapp 里直接运行就好了，或者直接用命令启动也行<strong>$ java -jar jenkins.war</strong><br>启动后访问 <strong>ip:8080/jenkins</strong><br>目前是配一个打包的一个发布的共两个项目，具体情况根据需要来做</p>
-<p>###maven打包任务</p>
-<ol>
+<h2 id="jenkins-持续继承构建服务"><a href="#jenkins-持续继承构建服务" class="headerlink" title="jenkins 持续继承构建服务"></a>jenkins 持续继承构建服务</h2><p>下载最新的war包 扔到tomcat webapp 里直接运行就好了，或者直接用命令启动也行<strong>$ java -jar jenkins.war</strong><br>启动后访问 <strong>ip:8080/jenkins</strong><br>目前是配一个打包的一个发布的共两个项目，具体情况根据需要来做</p>
+<h3 id="maven打包任务"><a href="#maven打包任务" class="headerlink" title="maven打包任务"></a>maven打包任务</h3><ol>
 <li>新建-》选择“构建一个maven项目” 名字随便写比如就叫<strong>ci01</strong></li>
 <li>设置 源码管理 选择 Subversion 填入 svn 地址</li>
 <li>构建触发器 Build periodically 日程表 填：<strong>0 13,17 <em> </em> *</strong> 每天中午一点下午五点 自动构建</li>
 <li>Build 中goals and options 填入 <strong>clean -U package -P uat</strong> (-p用来指定不同的环境配置)</li>
 <li>保存就好了</li>
 </ol>
-<p>###weblogic 发布任务</p>
-<p>以上配置用来配置打包，配好后再配置一个自动发布的任务</p>
+<h3 id="weblogic-发布任务"><a href="#weblogic-发布任务" class="headerlink" title="weblogic 发布任务"></a>weblogic 发布任务</h3><p>以上配置用来配置打包，配好后再配置一个自动发布的任务</p>
 <ol>
 <li>新建 选择 构建一个自由风格的</li>
 <li>源码管理选择 None</li>
@@ -400,6 +392,7 @@ wlfullclient.jar生成方式是,">
 <li>-redploy 重新发布的 意思 </li>
 <li>-source 本地需要上传war包路径<br>更详细的参数可以参考oracle网站的文档</li>
 </ol>
+<p><a href="https://zybuluo.com/kevinZheng/note/359003" target="_blank" rel="external">zybuluo文章地址</a></p>
 
       
     </div>
@@ -561,7 +554,7 @@ wlfullclient.jar生成方式是,">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境包含"><span class="nav-number">1.</span> <span class="nav-text">环境包含</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境包含"><span class="nav-number">1.</span> <span class="nav-text">环境包含</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#weblogic-测试服务器"><span class="nav-number">2.</span> <span class="nav-text">weblogic 测试服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看weblogic-Deployer例子"><span class="nav-number">2.1.</span> <span class="nav-text">查看weblogic.Deployer例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#weblogic-Deployer卸载某个web应用"><span class="nav-number">2.2.</span> <span class="nav-text">weblogic.Deployer卸载某个web应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#weblogic-Deployer部署web应用"><span class="nav-number">2.3.</span> <span class="nav-text">weblogic.Deployer部署web应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带上版本号-可以不停应用的同时部署"><span class="nav-number">2.4.</span> <span class="nav-text">带上版本号 可以不停应用的同时部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maven私服"><span class="nav-number">3.</span> <span class="nav-text">maven私服</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jenkins-持续继承构建服务"><span class="nav-number">4.</span> <span class="nav-text">jenkins 持续继承构建服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#maven打包任务"><span class="nav-number">4.1.</span> <span class="nav-text">maven打包任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#weblogic-发布任务"><span class="nav-number">4.2.</span> <span class="nav-text">weblogic 发布任务</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
