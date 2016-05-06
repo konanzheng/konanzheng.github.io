@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog,free," />
+  <meta name="keywords" content="ci,jenkins,weblogic,maven," />
 
 
 
@@ -80,19 +80,52 @@
 
 
 
-<meta name="description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud
-DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
+<meta name="description" content="java web项目 团队开发过程中使用持续集成来运行重复的工作解放劳动力
+环境包含
+svn 服务器
+weblogic 测试服务器
+maven 私服
+jenkins 持续继承构建服务
+
+##weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
+
+生存wlfullclient.jar 
+了解一下weblogic.Deployer命令
+
+wlfullclient.jar生成方式是,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="free blog">
-<meta property="og:url" content="http://yoursite.com/2016/04/25/free-blog/index.html">
+<meta property="og:title" content="jenkins-weblogic">
+<meta property="og:url" content="http://yoursite.com/2016/05/05/jenkins-weblogic/index.html">
 <meta property="og:site_name" content="kevinzheng's 博客">
-<meta property="og:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud
-DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
-<meta property="og:updated_time" content="2016-04-25T15:38:36.399Z">
+<meta property="og:description" content="java web项目 团队开发过程中使用持续集成来运行重复的工作解放劳动力
+环境包含
+svn 服务器
+weblogic 测试服务器
+maven 私服
+jenkins 持续继承构建服务
+
+##weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
+
+生存wlfullclient.jar 
+了解一下weblogic.Deployer命令
+
+wlfullclient.jar生成方式是,">
+<meta property="og:updated_time" content="2016-05-06T01:05:15.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="free blog">
-<meta name="twitter:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud
-DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
+<meta name="twitter:title" content="jenkins-weblogic">
+<meta name="twitter:description" content="java web项目 团队开发过程中使用持续集成来运行重复的工作解放劳动力
+环境包含
+svn 服务器
+weblogic 测试服务器
+maven 私服
+jenkins 持续继承构建服务
+
+##weblogic 测试服务器建域 启动什么的都不说了，重点记一下远程发布
+
+生存wlfullclient.jar 
+了解一下weblogic.Deployer命令
+
+wlfullclient.jar生成方式是,">
 
 
 
@@ -110,7 +143,7 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
   };
 </script>
 
-  <title> free blog | kevinzheng's 博客 </title>
+  <title> jenkins-weblogic | kevinzheng's 博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -230,7 +263,7 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
             
             
               
-                free blog
+                jenkins-weblogic
               
             
           </h1>
@@ -242,8 +275,8 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T22:52:09+08:00" content="2016-04-25">
-              2016-04-25
+            <time itemprop="dateCreated" datetime="2016-05-05T20:33:17+08:00" content="2016-05-05">
+              2016-05-05
             </time>
           </span>
 
@@ -253,8 +286,8 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/25/free-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/free-blog/" itemprop="commentsCount"></span>
+                <a href="/2016/05/05/jenkins-weblogic/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/05/jenkins-weblogic/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -276,20 +309,96 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
       
 
       
-        <h2 id="用过的免费静态blog的平台"><a href="#用过的免费静态blog的平台" class="headerlink" title="用过的免费静态blog的平台"></a>用过的免费静态blog的平台</h2><p>最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当<br>后来发现了<a href="https://coding.net" target="_blank" rel="external">coding</a> 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud</p>
-<h3 id="DaoCloud"><a href="#DaoCloud" class="headerlink" title="DaoCloud"></a>DaoCloud</h3><p>最开始是通过coding 了解到docker 的，然后从<a href="https://www.daocloud.io/" target="_blank" rel="external">daocloud</a> 上注册了帐号开始体验docker的神奇和daocloud上免费网络部署资源的。<br>在daocloud上利用代码构建镜像并部署自己的应用，到目前为止还可以免费使用的两个弹性资源。<br>下面介绍一下假设已经开通coding pages的同时如何在daocloud上部署自己的静态博客</p>
-<ol>
-<li>注册daocloud帐号</li>
-<li>代码构建里新建项目</li>
-<li>设置代码源指定coding的静态项目</li>
-<li>coding 的静态博客项目里面加入Dockerfile</li>
+        <p>java web项目 团队开发过程中使用持续集成来运行重复的工作解放劳动力</p>
+<h2 id="环境包含"><a href="#环境包含" class="headerlink" title="环境包含"></a>环境包含</h2><ol>
+<li>svn 服务器</li>
+<li>weblogic 测试服务器</li>
+<li>maven 私服</li>
+<li>jenkins 持续继承构建服务</li>
 </ol>
-<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
-<p>这里只是介绍个大概，后续在写一片详细的介绍利用hexo+coding+daocloud持续构建静态博客的博文，这里先挖个坑后面慢慢填</p>
+<p>##weblogic 测试服务器<br>建域 启动什么的都不说了，重点记一下远程发布</p>
 <ol>
-<li>hexo+coding+daocloud持续继承部署静态博客</li>
-<li>hexo deploy在网站包含非其他部分静态内容时的坑</li>
-<li>自己写脚本自动部署静态博客，以及用git项目上进行markdown文章和hexo项目进行备份的</li>
+<li>生存wlfullclient.jar </li>
+<li>了解一下weblogic.Deployer命令</li>
+</ol>
+<p>wlfullclient.jar生成方式是,进入weblogic的安装目录例如/u01/Oracle/Middleware/wlserver_10.3/server/lib,<br>运行<strong>java -jar wljarbuilder.jar</strong><br>就能生成wlfullclient.jar文件 ,然后拷贝到jenkins 部署的机器上后面会用到</p>
+<p>###查看weblogic.Deployer例子</p>
+<pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -examples
+</code></pre><p>###eblogic.Deployer卸载某个web应用</p>
+<pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -name demo01 -targets AdminServer -adminurl t3://10.100.202.163:7001 -username weblogic -password weblogic# -undeploy
+</code></pre><p>###weblogic.Deployer部署web应用</p>
+<pre><code>java -Xms256M -Xmx256M -cp wlfullclient.jar weblogic.Deployer -debug -stage -remote -verbose -upload -name demo01 -targets AdminServer -adminurl t3://10.100.202.163:7001 -username weblogic -password weblogic# -deploy demo01.war
+</code></pre><p>###带上版本号 可以不停应用的同时部署</p>
+<p><strong>-appversion</strong><br>经过试用，发现-deploy最多支持两个版本的存在继续发布就报错了，没找到设置的地方而且不能自动删除之前的版本 感觉不太实用,还是用 <code>-redeploy</code> 命令</p>
+<p>##maven私服</p>
+<p>网上下载最新的nexus 解压运行<br>跟据项目pom.xml 中设置对应的repositiories 即可<br>配置setting.xml</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.1.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd&quot;&gt;
+    &lt;mirrors&gt;
+        &lt;mirror&gt;
+            &lt;id&gt;icrm-repository&lt;/id&gt;
+            &lt;name&gt;icrm&lt;/name&gt;
+            &lt;url&gt;http://maven.icrm.pactera.com:8081/nexus/content/groups/icrm&lt;/url&gt;
+            &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+        &lt;/mirror&gt;
+    &lt;/mirrors&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;icrm-repository&lt;/id&gt;
+            &lt;username&gt;admin&lt;/username&gt;
+            &lt;password&gt;admin123&lt;/password&gt;
+        &lt;/server&gt;
+        &lt;server&gt;
+            &lt;id&gt;icrm-pluginRepository&lt;/id&gt;
+            &lt;username&gt;admin&lt;/username&gt;
+            &lt;password&gt;admin123&lt;/password&gt;
+        &lt;/server&gt;
+        &lt;server&gt;
+            &lt;id&gt;icrm-snapshots&lt;/id&gt;
+            &lt;username&gt;admin&lt;/username&gt;
+            &lt;password&gt;admin123&lt;/password&gt;
+        &lt;/server&gt;
+        &lt;server&gt;
+            &lt;id&gt;icrm-releases&lt;/id&gt;
+            &lt;username&gt;admin&lt;/username&gt;
+            &lt;password&gt;admin123&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+&lt;/settings&gt;
+</code></pre><p>主要是配置私服代理，和发布用的server信息，配好能同步更新依赖jar包就ok 了</p>
+<p>##jenkins 持续继承构建服务</p>
+<p>下载最新的war包 扔到tomcat webapp 里直接运行就好了，或者直接用命令启动也行<strong>$ java -jar jenkins.war</strong><br>启动后访问 <strong>ip:8080/jenkins</strong><br>目前是配一个打包的一个发布的共两个项目，具体情况根据需要来做</p>
+<p>###maven打包任务</p>
+<ol>
+<li>新建-》选择“构建一个maven项目” 名字随便写比如就叫<strong>ci01</strong></li>
+<li>设置 源码管理 选择 Subversion 填入 svn 地址</li>
+<li>构建触发器 Build periodically 日程表 填：<strong>0 13,17 <em> </em> *</strong> 每天中午一点下午五点 自动构建</li>
+<li>Build 中goals and options 填入 <strong>clean -U package -P uat</strong> (-p用来指定不同的环境配置)</li>
+<li>保存就好了</li>
+</ol>
+<p>###weblogic 发布任务</p>
+<p>以上配置用来配置打包，配好后再配置一个自动发布的任务</p>
+<ol>
+<li>新建 选择 构建一个自由风格的</li>
+<li>源码管理选择 None</li>
+<li>构建触发器选择 “Build after other projects are built” 然后填入<strong>ci01</strong></li>
+<li>构建里面 点击“增加构建步骤” 选择 Execute shell </li>
+<li>command 里面填入自动发布的命令</li>
+<li><p>保存<br><strong>自动发布命令</strong>:</p>
+<p> java -Xms256M -Xmx256M -cp ~/ci/wlfullclient.jar weblogic.Deployer -verbose -upload -name demo01  -targets AdminServer -adminurl t3://10.101.2.124:7001 -username weblogic -password weblogic# -redeploy   -source ~/.jenkins/workspace/ci01/target/demo01.war</p>
+</li>
+</ol>
+<p>命令说明：</p>
+<ol>
+<li>-Xms256M -Xmx256M 用来防止内存溢出，</li>
+<li>wlfullclient.jar 里提供了weblogic.Deployer 命令用来远程发布项目war包，所以 需要-cp指定jar包路径 来启动命令 ,</li>
+<li>-verbose 指定后面的参数，</li>
+<li>-upload 远程发布需要上传文件，</li>
+<li>-name  发布项目名称 </li>
+<li>-targets 目标服务，</li>
+<li>-adminurl  指定连接 weblogic 的协议 ip 和端口</li>
+<li>-redploy 重新发布的 意思 </li>
+<li>-source 本地需要上传war包路径<br>更详细的参数可以参考oracle网站的文档</li>
 </ol>
 
       
@@ -311,9 +420,13 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag">#blog</a>
+            <a href="/tags/ci/" rel="tag">#ci</a>
           
-            <a href="/tags/free/" rel="tag">#free</a>
+            <a href="/tags/jenkins/" rel="tag">#jenkins</a>
+          
+            <a href="/tags/weblogic/" rel="tag">#weblogic</a>
+          
+            <a href="/tags/maven/" rel="tag">#maven</a>
           
         </div>
       
@@ -322,17 +435,13 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/17/hibernate/" rel="next" title="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数">
-                <i class="fa fa-chevron-left"></i> tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数
+              <a href="/2016/04/25/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/25/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -358,8 +467,8 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/25/free-blog/"
-           data-title="free blog" data-url="http://yoursite.com/2016/04/25/free-blog/">
+      <div class="ds-thread" data-thread-key="2016/05/05/jenkins-weblogic/"
+           data-title="jenkins-weblogic" data-url="http://yoursite.com/2016/05/05/jenkins-weblogic/">
       </div>
     
   </div>
@@ -452,7 +561,7 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用过的免费静态blog的平台"><span class="nav-number">1.</span> <span class="nav-text">用过的免费静态blog的平台</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DaoCloud"><span class="nav-number">1.1.</span> <span class="nav-text">DaoCloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dockerfile内容"><span class="nav-number">1.2.</span> <span class="nav-text">Dockerfile内容</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境包含"><span class="nav-number">1.</span> <span class="nav-text">环境包含</span></a></li></ol></div>
             
           </div>
         </section>
