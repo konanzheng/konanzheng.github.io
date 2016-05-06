@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="java,tools,patch,eclipse,web,class," />
+  <meta name="keywords" content="hexo,coding,daocloud,docker," />
 
 
 
@@ -80,19 +80,35 @@
 
 
 
-<meta name="description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
-###实现方式最初考虑">
+<meta name="description" content="利用hexo+coding+daocloud持续构建静态博客
+关于hexohexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点
+
+nodejs 、npm 安装完之后使用taobao的npm镜像
+创建本地博客目录,然后进入执行hexo init
+安装漂亮的next主题 git clone https://github.com/iissnan/hexo-theme-ne">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jeePatchExp补丁导出1.0">
-<meta property="og:url" content="http://yoursite.com/2015/07/04/jeePatchExp/index.html">
+<meta property="og:title" content="hexo+coding+daocloud">
+<meta property="og:url" content="http://yoursite.com/2016/05/06/hexo-coding-daocloud/index.html">
 <meta property="og:site_name" content="kevinzheng's 博客">
-<meta property="og:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
-###实现方式最初考虑">
-<meta property="og:updated_time" content="2016-04-25T14:33:25.387Z">
+<meta property="og:description" content="利用hexo+coding+daocloud持续构建静态博客
+关于hexohexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点
+
+nodejs 、npm 安装完之后使用taobao的npm镜像
+创建本地博客目录,然后进入执行hexo init
+安装漂亮的next主题 git clone https://github.com/iissnan/hexo-theme-ne">
+<meta property="og:image" content="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png">
+<meta property="og:image" content="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_001.png">
+<meta property="og:image" content="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_002.png">
+<meta property="og:updated_time" content="2016-05-06T07:00:29.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jeePatchExp补丁导出1.0">
-<meta name="twitter:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
-###实现方式最初考虑">
+<meta name="twitter:title" content="hexo+coding+daocloud">
+<meta name="twitter:description" content="利用hexo+coding+daocloud持续构建静态博客
+关于hexohexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点
+
+nodejs 、npm 安装完之后使用taobao的npm镜像
+创建本地博客目录,然后进入执行hexo init
+安装漂亮的next主题 git clone https://github.com/iissnan/hexo-theme-ne">
+<meta name="twitter:image" content="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png">
 
 
 
@@ -110,7 +126,7 @@
   };
 </script>
 
-  <title> jeePatchExp补丁导出1.0 | kevinzheng's 博客 </title>
+  <title> hexo+coding+daocloud | kevinzheng's 博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -230,7 +246,7 @@
             
             
               
-                jeePatchExp补丁导出1.0
+                hexo+coding+daocloud
               
             
           </h1>
@@ -242,38 +258,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-04T13:50:17+08:00" content="2015-07-04">
-              2015-07-04
+            <time itemprop="dateCreated" datetime="2016-05-06T13:32:33+08:00" content="2016-05-06">
+              2016-05-06
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">tools</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/07/04/jeePatchExp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/jeePatchExp/" itemprop="commentsCount"></span>
+                <a href="/2016/05/06/hexo-coding-daocloud/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/hexo-coding-daocloud/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -295,78 +292,35 @@
       
 
       
-        <p>###背景介绍<br>java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  </p>
-<p>###实现方式<br>最初考虑使用脚本实现，但是脚本不能跨平台而且我只会最简单的脚本处理复杂的字符串不擅长。索性就用擅长的java写这个工具了。整体想法就是做一个可执行的jar 供eclipse 外部工具调用 。</p>
-<pre><code class="flow">st=&gt;start: Start
-io=&gt;inputoutput: 选择资源
-op=&gt;operation: 点击外部工具导出
-cond=&gt;condition: 参数是否合法?
-e=&gt;end
-
-st-&gt;io-&gt;op-&gt;cond
-cond(yes)-&gt;e
-cond(no)-&gt;io
-</code></pre>
-<p>###关键代码</p>
-<pre><code>/**
- * 导出资源
- * 目前只考虑代码，配置或其他资源文件暂不考虑
- * 且只能每次导出一个文件,
- * 判断资源路径中是否包含constants_WEBCONTENT ，包含则直接复制
- * 判断资源文件以.java结尾，拷贝class文件到对应目录
- */
-public void expResource(){
-    String src=resource_loc;//原文件
-    String desc=&quot;&quot;;//导出文件
-    String rName=resource_name;
-
-    if(resource_loc!=null&amp;&amp;resource_loc.contains(constants_WEBCONTENT)){
-        String desc_temp=resource_loc.substring(resource_loc.indexOf(constants_WEBCONTENT));
-        desc=desc_temp.replace(constants_WEBCONTENT, expFolder+File.separatorChar+project_name);
-        makFIleDirs(desc.replace(rName, &quot;&quot;));
-        copyResource(src,desc);
-    }
-    if(resource_name!=null&amp;&amp;resource_name.endsWith(constants_JAVAFILE)){
-        String[] src_strs=resource_loc.split(project_name);
-        String separator = getSeparator();
-        String ydmMl=src_strs[1].split(separator)[1];
-        String src_temp=constants_CLASSES+src_strs[1].replaceFirst(separator+ydmMl+separator, &quot;&quot;).replace(constants_JAVAFILE, constants_CLASSFILE);
-        src=project_loc+File.separatorChar+constants_WEBCONTENT+src_temp;
-        desc=expFolder+File.separatorChar+project_name+src_temp;
-        rName=resource_name.replace(constants_JAVAFILE, constants_CLASSFILE);
-        makFIleDirs(desc.replace(rName, &quot;&quot;));
-        expInnerClass(src, desc, rName);
-        copyResource(src,desc);
-    }
-
-}
-/**
- * 导出内部类
- * @param src
- * @param desc
- * @param rName
- */
-public void expInnerClass(String src,String desc,String rName){
-    File classFileFolder=new File(desc.replace(rName, &quot;&quot;));
-    if(classFileFolder.exists()){
-        for(String filename:classFileFolder.list()){
-            if(filename!=null&amp;&amp;filename.startsWith(rName.replace(constants_CLASSFILE, &quot;$&quot;))&amp;&amp;filename.endsWith(constants_CLASSFILE)){
-                copyResource(src.replace(rName, filename),desc.replace(rName, filename));
-            }
-        }
-    }
-}
-</code></pre><p>当然最初的想法每次只能导出一个类文件确实有点坑爹，所以又扩展了一种用法，利用svn插件create patch功能导出patch20141216.txt 文件放到工程下面然后选择这个补丁说明文件导出多个资源文件。</p>
-<hr>
-<p>###遇到的问题</p>
-<p>####字符串分割替换<br>替换资源路径字符串时候遇到的问题就是windows 下的路径比如<code>c:\\somethingA\\somethingB\\somethingC</code> 替换的时候不能根据<code>File.separatorChar</code> 直接分割替换，需要用四个反斜杠<code>“\\\\”</code>这一点需要注意。</p>
-<p>####可执行jar<br>window下eclipse外部工具指定jar文件直接作为可执行文件会报错，当时想到的方案是手动写个批处理，将eclipse传递出来的参数再传递给main函数即<code>java -jar jeePatchExp.jar %1 %2 %3 %4 %5</code> 这样。后来经过实验发现在windows下修改jar文件的默认打开方式改成java.exe就好了</p>
-<hr>
-<p>###详细内容及下载<br>具体配置使用方法及详细代码： <a href="https://github.com/konanzheng/jeePatchExpTool" target="_blank" rel="external"> <i class="icon-github"></i>前往查看</a></p>
-<p>编译好的jar包： <a href="http://konanzheng.github.io/filedownload/jeePatchExp.jar" target="_blank" rel="external"> <i class="icon-download-alt"></i>点击下载</a></p>
-<hr>
-<p>eclipse外部工具: Eclipse外部工具:就是调试、运行工具按钮旁边那个运行工具箱图标里面操作的东东，可以定义如何调用外部程序</p>
-<p>create patch功能:创建补丁说明文件:需要使用svn 插件，先同步资源，然后选择资源文件点击右键-&gt;create Patch 选择保存到工作空间项目下面</p>
+        <p>利用hexo+coding+daocloud持续构建静态博客</p>
+<h2 id="关于hexo"><a href="#关于hexo" class="headerlink" title="关于hexo"></a>关于hexo</h2><p>hexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点</p>
+<ol>
+<li>nodejs 、npm 安装完之后使用<a href="http://npm.taobao.org/" target="_blank" rel="external">taobao的npm镜像</a></li>
+<li>创建本地博客目录,然后进入执行<strong>hexo init</strong></li>
+<li>安装漂亮的next主题 git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</li>
+<li>注意在source目录中的内容会自动生成到public目录中</li>
+<li>hexo g 生成静态博客内容，启动看看效果 hexo s</li>
+</ol>
+<h2 id="coding"><a href="#coding" class="headerlink" title="coding"></a>coding</h2><ol>
+<li>配置ssh公钥 <a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">帮助文档</a></li>
+<li>开启coding 的pages服务 <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">帮助文档</a></li>
+<li>通过git将静态博客内容（public目录）传到coding 的个人pages工程</li>
+<li>再建一个项目用来存博客原始内容即本地博客目录下的内容</li>
+<li>利用脚本自动发布<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> #!/bin/bash</span><br><span class="line">echo &quot;生成静态文件&quot;</span><br><span class="line">hexo g</span><br><span class="line">echo &quot;coping deploy files 2 kevinzheng&quot;</span><br><span class="line">cp -r public/* ../kevinzheng/</span><br><span class="line">git add .</span><br><span class="line">cmContent=提交博客内容$(date +%s)</span><br><span class="line">git commit -m $cmContent</span><br><span class="line">git push</span><br><span class="line">#git commit kevinzheng</span><br><span class="line">cd ../kevinzheng</span><br><span class="line">git add .</span><br><span class="line">cmContent=提交博客内容$(date +%s)</span><br><span class="line">git commit -m $cmContent</span><br><span class="line">git push</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>脚本解释</p>
+<ol>
+<li>hexo g 生存静态内容</li>
+<li>拷贝public下静态内容到coding pages的本地仓库</li>
+<li>利用时间戳定义一个提交评论信息变量cmContent</li>
+<li>git提交并推送pages仓库到coding 服务器</li>
+<li>提交并推送博客原始内容到coding服务器</li>
+</ol>
+<p>以上这些就是使用coding做静态博客的大功率内容，如果还想有个备份在daocloud上也部署一个顺便学习docker可以看看下面的daocloud 部署静态博客章节</p>
+<h2 id="daocloud-部署静态博客"><a href="#daocloud-部署静态博客" class="headerlink" title="daocloud 部署静态博客"></a>daocloud 部署静态博客</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>coding 的个人博客项目中source目录加入Dockerfile 即可。<br>hexo生成静态内容的时候会自动把Source下的内容放到public中即个人pages工程根目录会有Dockerfile ，daocloud进行持续集成构建镜像会用到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure></p>
+<h3 id="代码构建"><a href="#代码构建" class="headerlink" title="代码构建"></a>代码构建</h3><p><img src="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png" alt="daocloud代码构建个功能截图"><br>在代码构建功能中选择coding 认证登陆之后选择个人pages项目<br>然后设置镜像构建和持续集成<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_001.png" alt="此处输入图片的描述"><br>触发规则<br>当代码仓库发生下面的操作时会触发镜像构建<br>提交tag<br>提交代码到分支: coding-pages 修改</p>
+<h3 id="镜像部署"><a href="#镜像部署" class="headerlink" title="镜像部署"></a>镜像部署</h3><p>镜像构建完成之后可以作为应用直接发布，基本默认配置就好改一下自己喜欢且没被占用的子域名即可，发布里设置自动发布<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_002.png" alt="此处输入图片的描述"><br>以后本地博客写完之后自动发布到coding 然后自动触发daocloud 持续集成并构建成镜像 发布到daocloud的 daoapp域名下</p>
 
       
     </div>
@@ -387,17 +341,13 @@ public void expInnerClass(String src,String desc,String rName){
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag">#java</a>
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
           
-            <a href="/tags/tools/" rel="tag">#tools</a>
+            <a href="/tags/coding/" rel="tag">#coding</a>
           
-            <a href="/tags/patch/" rel="tag">#patch</a>
+            <a href="/tags/daocloud/" rel="tag">#daocloud</a>
           
-            <a href="/tags/eclipse/" rel="tag">#eclipse</a>
-          
-            <a href="/tags/web/" rel="tag">#web</a>
-          
-            <a href="/tags/class/" rel="tag">#class</a>
+            <a href="/tags/docker/" rel="tag">#docker</a>
           
         </div>
       
@@ -406,17 +356,13 @@ public void expInnerClass(String src,String desc,String rName){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/04/tools-list/" rel="next" title="tools list">
-                <i class="fa fa-chevron-left"></i> tools list
+              <a href="/2016/05/05/jenkins-weblogic/" rel="next" title="jenkins-weblogic">
+                <i class="fa fa-chevron-left"></i> jenkins-weblogic
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/07/17/hibernate/" rel="prev" title="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数">
-                tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -442,8 +388,8 @@ public void expInnerClass(String src,String desc,String rName){
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/07/04/jeePatchExp/"
-           data-title="jeePatchExp补丁导出1.0" data-url="http://yoursite.com/2015/07/04/jeePatchExp/">
+      <div class="ds-thread" data-thread-key="2016/05/06/hexo-coding-daocloud/"
+           data-title="hexo+coding+daocloud" data-url="http://yoursite.com/2016/05/06/hexo-coding-daocloud/">
       </div>
     
   </div>
@@ -536,7 +482,7 @@ public void expInnerClass(String src,String desc,String rName){
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于hexo"><span class="nav-number">1.</span> <span class="nav-text">关于hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#coding"><span class="nav-number">2.</span> <span class="nav-text">coding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#daocloud-部署静态博客"><span class="nav-number">3.</span> <span class="nav-text">daocloud 部署静态博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码构建"><span class="nav-number">3.2.</span> <span class="nav-text">代码构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#镜像部署"><span class="nav-number">3.3.</span> <span class="nav-text">镜像部署</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

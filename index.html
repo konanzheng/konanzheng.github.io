@@ -229,6 +229,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/06/hexo-coding-daocloud/" itemprop="url">
+                  hexo+coding+daocloud
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-06T13:32:33+08:00" content="2016-05-06">
+              2016-05-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/06/hexo-coding-daocloud/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/hexo-coding-daocloud/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>利用hexo+coding+daocloud持续构建静态博客</p>
+<h2 id="关于hexo"><a href="#关于hexo" class="headerlink" title="关于hexo"></a>关于hexo</h2><p>hexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点</p>
+<ol>
+<li>nodejs 、npm 安装完之后使用<a href="http://npm.taobao.org/" target="_blank" rel="external">taobao的npm镜像</a></li>
+<li>创建本地博客目录,然后进入执行<strong>hexo init</strong></li>
+<li>安装漂亮的next主题 git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</li>
+<li>注意在source目录中的内容会自动生成到public目录中</li>
+<li>hexo g 生成静态博客内容，启动看看效果 hexo s</li>
+</ol>
+<h2 id="coding"><a href="#coding" class="headerlink" title="coding"></a>coding</h2><ol>
+<li>配置ssh公钥 <a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">帮助文档</a></li>
+<li>开启coding 的pages服务 <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">帮助文档</a></li>
+<li>通过git将静态博客内容（public目录）传到coding 的个人pages工程</li>
+<li>再建一个项目用来存博客原始内容即本地博客目录下的内容</li>
+<li>利用脚本自动发布<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> #!/bin/bash</span><br><span class="line">echo &quot;生成静态文件&quot;</span><br><span class="line">hexo g</span><br><span class="line">echo &quot;coping deploy files 2 kevinzheng&quot;</span><br><span class="line">cp -r public/* ../kevinzheng/</span><br><span class="line">git add .</span><br><span class="line">cmContent=提交博客内容$(date +%s)</span><br><span class="line">git commit -m $cmContent</span><br><span class="line">git push</span><br><span class="line">#git commit kevinzheng</span><br><span class="line">cd ../kevinzheng</span><br><span class="line">git add .</span><br><span class="line">cmContent=提交博客内容$(date +%s)</span><br><span class="line">git commit -m $cmContent</span><br><span class="line">git push</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>脚本解释</p>
+<ol>
+<li>hexo g 生存静态内容</li>
+<li>拷贝public下静态内容到coding pages的本地仓库</li>
+<li>利用时间戳定义一个提交评论信息变量cmContent</li>
+<li>git提交并推送pages仓库到coding 服务器</li>
+<li>提交并推送博客原始内容到coding服务器</li>
+</ol>
+<p>以上这些就是使用coding做静态博客的大功率内容，如果还想有个备份在daocloud上也部署一个顺便学习docker可以看看下面的daocloud 部署静态博客章节</p>
+<h2 id="daocloud-部署静态博客"><a href="#daocloud-部署静态博客" class="headerlink" title="daocloud 部署静态博客"></a>daocloud 部署静态博客</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>coding 的个人博客项目中source目录加入Dockerfile 即可。<br>hexo生成静态内容的时候会自动把Source下的内容放到public中即个人pages工程根目录会有Dockerfile ，daocloud进行持续集成构建镜像会用到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure></p>
+<h3 id="代码构建"><a href="#代码构建" class="headerlink" title="代码构建"></a>代码构建</h3><p><img src="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png" alt="daocloud代码构建个功能截图"><br>在代码构建功能中选择coding 认证登陆之后选择个人pages项目<br>然后设置镜像构建和持续集成<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_001.png" alt="此处输入图片的描述"><br>触发规则<br>当代码仓库发生下面的操作时会触发镜像构建<br>提交tag<br>提交代码到分支: coding-pages 修改</p>
+<h3 id="镜像部署"><a href="#镜像部署" class="headerlink" title="镜像部署"></a>镜像部署</h3><p>镜像构建完成之后可以作为应用直接发布，基本默认配置就好改一下自己喜欢且没被占用的子域名即可，发布里设置自动发布<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_002.png" alt="此处输入图片的描述"><br>以后本地博客写完之后自动发布到coding 然后自动触发daocloud 持续集成并构建成镜像 发布到daocloud的 daoapp域名下</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/05/jenkins-weblogic/" itemprop="url">
                   jenkins-weblogic
                 </a>
@@ -578,7 +706,7 @@
 <li>设置代码源指定coding的静态项目</li>
 <li>coding 的静态博客项目里面加入Dockerfile</li>
 </ol>
-<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
+<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
 <p>这里只是介绍个大概，后续在写一片详细的介绍利用hexo+coding+daocloud持续构建静态博客的博文，这里先挖个坑后面慢慢填</p>
 <ol>
 <li>hexo+coding+daocloud持续继承部署静态博客</li>
@@ -1093,7 +1221,7 @@ public void expInnerClass(String src,String desc,String rName){
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1110,7 +1238,7 @@ public void expInnerClass(String src,String desc,String rName){
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

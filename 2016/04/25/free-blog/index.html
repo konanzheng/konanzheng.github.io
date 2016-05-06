@@ -88,7 +88,7 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
 <meta property="og:site_name" content="kevinzheng's 博客">
 <meta property="og:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud
 DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
-<meta property="og:updated_time" content="2016-04-25T15:38:36.399Z">
+<meta property="og:updated_time" content="2016-05-06T05:31:29.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="free blog">
 <meta name="twitter:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud
@@ -284,7 +284,7 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
 <li>设置代码源指定coding的静态项目</li>
 <li>coding 的静态博客项目里面加入Dockerfile</li>
 </ol>
-<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
+<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
 <p>这里只是介绍个大概，后续在写一片详细的介绍利用hexo+coding+daocloud持续构建静态博客的博文，这里先挖个坑后面慢慢填</p>
 <ol>
 <li>hexo+coding+daocloud持续继承部署静态博客</li>
@@ -404,7 +404,7 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -421,7 +421,7 @@ DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注�
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
