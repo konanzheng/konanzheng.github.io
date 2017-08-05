@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -27,7 +34,12 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -59,9 +71,11 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -73,108 +87,110 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
 
 
 
-<meta name="description" content="#静态博客
-hexo生成的博客，还包含一些前台页面，部署在coding和daocloud。是云开发部署环境学习实践的静态页面最简单实现。同时也练习使用hexo博客记录些编程有用的东西。   
-
-使用coding的免费开放代码存储服务   
-使用markdwon写作   
-使用hexo进行markdown到html的转换   
-使用daocloud的docker免费部署服务">
+<meta name="description" content="#静态博客 hexo生成的博客，还包含一些前台页面，部署在coding和daocloud。是云开发部署环境学习实践的静态页面最简单实现。同时也练习使用hexo博客记录些编程有用的东西。     使用coding的免费开放代码存储服务    使用markdwon写作    使用hexo进行markdown到html的转换    使用daocloud的docker免费部署服务">
 <meta property="og:type" content="website">
-<meta property="og:title" content="kevinzheng's 博客">
-<meta property="og:url" content="http://yoursite.com/README.html">
-<meta property="og:site_name" content="kevinzheng's 博客">
-<meta property="og:description" content="#静态博客
-hexo生成的博客，还包含一些前台页面，部署在coding和daocloud。是云开发部署环境学习实践的静态页面最简单实现。同时也练习使用hexo博客记录些编程有用的东西。   
-
-使用coding的免费开放代码存储服务   
-使用markdwon写作   
-使用hexo进行markdown到html的转换   
-使用daocloud的docker免费部署服务">
-<meta property="og:updated_time" content="2016-04-24T14:51:11.699Z">
+<meta property="og:title" content="彦润他爹的博客">
+<meta property="og:url" content="http://www.yoursite.com/README.html">
+<meta property="og:site_name" content="彦润他爹的博客">
+<meta property="og:description" content="#静态博客 hexo生成的博客，还包含一些前台页面，部署在coding和daocloud。是云开发部署环境学习实践的静态页面最简单实现。同时也练习使用hexo博客记录些编程有用的东西。     使用coding的免费开放代码存储服务    使用markdwon写作    使用hexo进行markdown到html的转换    使用daocloud的docker免费部署服务">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-05T00:30:20.079Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kevinzheng's 博客">
-<meta name="twitter:description" content="#静态博客
-hexo生成的博客，还包含一些前台页面，部署在coding和daocloud。是云开发部署环境学习实践的静态页面最简单实现。同时也练习使用hexo博客记录些编程有用的东西。   
-
-使用coding的免费开放代码存储服务   
-使用markdwon写作   
-使用hexo进行markdown到html的转换   
-使用daocloud的docker免费部署服务">
+<meta name="twitter:title" content="彦润他爹的博客">
+<meta name="twitter:description" content="#静态博客 hexo生成的博客，还包含一些前台页面，部署在coding和daocloud。是云开发部署环境学习实践的静态页面最简单实现。同时也练习使用hexo博客记录些编程有用的东西。     使用coding的免费开放代码存储服务    使用markdwon写作    使用hexo进行markdown到html的转换    使用daocloud的docker免费部署服务">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title>
+
+
+  <link rel="canonical" href="http://www.yoursite.com/README.html"/>
+
+
+
+
+
+  <title> | 彦润他爹的博客</title>
   
 
-  
-     | kevinzheng's 博客
-  
-</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-
-
-
-
-
-
-
-
-
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">kevinzheng's 博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">彦润他爹的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -187,7 +203,7 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -195,9 +211,9 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -205,9 +221,9 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -221,6 +237,8 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -233,7 +251,23 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
   <div id="posts" class="posts-expand">
     
     
-      <p>#静态博客</p>
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p>#静态博客</p>
 <p>hexo生成的博客，还包含一些前台页面，部署在coding和daocloud。<br>是云开发部署环境学习实践的静态页面最简单实现。同时也练习使用hexo博客记录些编程有用的东西。   </p>
 <ol>
 <li>使用coding的免费开放代码存储服务   </li>
@@ -242,6 +276,14 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
 <li>使用daocloud的docker免费部署服务    </li>
 </ol>
 
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
     
   </div>
 
@@ -254,7 +296,7 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="README.html"
-           data-title="" data-url="http://yoursite.com/README.html">
+           data-title="" data-url="http://www.yoursite.com/README.html">
       </div>
     
   </div>
@@ -273,41 +315,51 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif"
                alt="kevinzheng" />
           <p class="site-author-name" itemprop="name">kevinzheng</p>
-          <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+           
+              <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">20</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -325,11 +377,14 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
         
 
         
-        <div class="links-of-blogroll motion-element">
-          
-        </div>
+        
+
+        
+
 
       </section>
+
+      
 
       
 
@@ -346,15 +401,16 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">kevinzheng</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -365,13 +421,19 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
 </div>
 
 
+        
 
+        
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -394,43 +456,56 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
   
 
   
 
-  
 
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -455,6 +530,24 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
@@ -462,7 +555,11 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
 
 
   
+
   
+
+  
+
   
 
   

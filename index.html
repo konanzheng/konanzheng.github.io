@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -27,7 +34,12 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -59,9 +71,11 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -73,7 +87,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -82,35 +96,49 @@
 
 <meta name="description" content="世上只有2种人，懂二进制的和不懂得">
 <meta property="og:type" content="website">
-<meta property="og:title" content="kevinzheng's 博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="kevinzheng's 博客">
+<meta property="og:title" content="彦润他爹的博客">
+<meta property="og:url" content="http://www.yoursite.com/index.html">
+<meta property="og:site_name" content="彦润他爹的博客">
 <meta property="og:description" content="世上只有2种人，懂二进制的和不懂得">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kevinzheng's 博客">
+<meta name="twitter:title" content="彦润他爹的博客">
 <meta name="twitter:description" content="世上只有2种人，懂二进制的和不懂得">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> kevinzheng's 博客 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="http://www.yoursite.com/"/>
+
+
+
+
+
+  <title>彦润他爹的博客</title>
   
 
 
@@ -121,37 +149,49 @@
 
 
 
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">kevinzheng's 博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">彦润他爹的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -164,7 +204,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -172,9 +212,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -182,9 +222,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -197,6 +237,8 @@
 
   
 </nav>
+
+
 
  </div>
     </header>
@@ -211,13 +253,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2017/08/05/vue-coding-pp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
 
     
       <header class="post-header">
@@ -225,27 +281,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/05/06/hexo-coding-daocloud/" itemprop="url">
-                  hexo+coding+daocloud
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/08/05/vue-coding-pp/" itemprop="url">vue版coding冒泡广场demo</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-06T13:32:33+08:00" content="2016-05-06">
-              2016-05-06
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-05T10:44:59+08:00">
+                2017-08-05
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -253,24 +309,312 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/06/hexo-coding-daocloud/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/hexo-coding-daocloud/" itemprop="commentsCount"></span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/05/vue-coding-pp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/05/vue-coding-pp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
+
+      
+        
+          
+            <p>最近为了练习vue，结合coding api 做了一个小demo</p>
+<p>代码在<a href="https://git.coding.net/kevinzheng/vue-coding-pp.git" target="_blank" rel="external">coding仓库</a> </p>
+<p>用到的内容：</p>
+<ol>
+<li>vue2.0</li>
+<li>饿了么UI</li>
+<li>webpack</li>
+<li>coding API</li>
+</ol>
+<p>下面是main.js 中主要代码片段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import ElementUI from &apos;element-ui&apos;</div><div class="line">import &apos;element-ui/lib/theme-default/index.css&apos;</div><div class="line">import axios from &apos;axios&apos;</div><div class="line">Vue.prototype.$http = axios</div><div class="line">import App from &apos;./App.vue&apos;</div></pre></td></tr></table></figure></p>
+<p>webpack 中除了通用的配置以外用到了代理跨域配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">devServer: &#123;</div><div class="line">   host: &apos;127.0.0.1&apos;,</div><div class="line">   port: 8010,</div><div class="line">   proxy: &#123;</div><div class="line">     &apos;/coding/&apos;: &#123;</div><div class="line">       target: &apos;https://coding.net/api/&apos;,</div><div class="line">       changeOrigin: true,</div><div class="line">       pathRewrite: &#123;</div><div class="line">         &apos;^/coding&apos;: &apos;&apos;</div><div class="line">       &#125;</div><div class="line">     &#125;</div><div class="line">   &#125;,</div><div class="line">   ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>App.vue 中除了常规的循环，判断，事件，数组何兵等还用到了过滤器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">filters: &#123;</div><div class="line">    //时间格式化</div><div class="line">    timeFormat: function (value) &#123;</div><div class="line">      if (!value) return &apos;&apos;</div><div class="line">      var date = new Date(value);</div><div class="line">            var localeString = date.toLocaleString();</div><div class="line">      return localeString</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>过滤器用起来简单方便直接用<code>“|”</code> 管道符连起来就行</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2017/08/05/分辨率问题记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/05/分辨率问题记录/" itemprop="url">分辨率问题记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-05T09:06:59+08:00">
+                2017-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/05/分辨率问题记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/05/分辨率问题记录/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>遇到一个外接显示器不能设置最佳分辨率的问题。<br>使用linux mint 或者ubuntu 系统都有这个问题。VGA接口连上显示器之后，无法设置最佳显示分辨率1920*1080。<br>网上搜到可以用xrandr 设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  cvt 1920 1080</div></pre></td></tr></table></figure></p>
+<p>返回信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz</div><div class="line">Modeline &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div></pre></td></tr></table></figure></p>
+<p>这个就是显示模式的具体内容，下面使用xrandr命令把定义这个模式并应用到外接显示器上,VGA-1-1 是我外接的VGA显示器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ xrandr --newmode &quot;1920x1080_60.00&quot; 173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div><div class="line">$ xrandr --addmode VGA-1-1 &quot;1920x1080_60.00&quot;</div></pre></td></tr></table></figure>
+<p>最后加上检测逻辑之后，实现自动设置分辨率</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line"></div><div class="line">d=`xrandr | grep &apos;VGA-1-1 connected&apos;`</div><div class="line">if [ -n &quot;$d&quot; ]  </div><div class="line">then  </div><div class="line">	xrandr --newmode  &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div><div class="line">	xrandr --addmode VGA-1-1 &quot;1920x1080_60.00&quot;</div><div class="line">fi</div></pre></td></tr></table></figure>
+<p>解释一下脚本的含义：<code>xrandr | grep &#39;VGA-1-1 connected&#39;</code> 这个命令是根据xrandr的输出判断是不是连接了外接显示器“VGA1-1” 如果连接了就设置分辨率。这样可以防止没连接外接显示器的时候执行脚本出错。</p>
+<p>ps:将上边脚本内容复制到~/.profile 中即可实现登录自动设置分辨率</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2016/05/06/hexo-coding-daocloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/05/06/hexo-coding-daocloud/" itemprop="url">hexo+coding+daocloud</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-06T13:32:33+08:00">
+                2016-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/05/06/hexo-coding-daocloud/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/hexo-coding-daocloud/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -293,7 +637,7 @@
 <li>开启coding 的pages服务 <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">帮助文档</a></li>
 <li>通过git将静态博客内容（public目录）传到coding 的个人pages工程</li>
 <li>再建一个项目用来存博客原始内容即本地博客目录下的内容</li>
-<li>利用脚本自动发布<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> #!/bin/bash</span><br><span class="line">echo &quot;生成静态文件&quot;</span><br><span class="line">hexo g</span><br><span class="line">echo &quot;coping deploy files 2 kevinzheng&quot;</span><br><span class="line">cp -r public/* ../kevinzheng/</span><br><span class="line">git add .</span><br><span class="line">cmContent=提交博客内容$(date +%s)</span><br><span class="line">git commit -m $cmContent</span><br><span class="line">git push</span><br><span class="line">#git commit kevinzheng</span><br><span class="line">cd ../kevinzheng</span><br><span class="line">git add .</span><br><span class="line">cmContent=提交博客内容$(date +%s)</span><br><span class="line">git commit -m $cmContent</span><br><span class="line">git push</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+<li>利用脚本自动发布<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> #!/bin/bash</div><div class="line">echo &quot;生成静态文件&quot;</div><div class="line">hexo g</div><div class="line">echo &quot;coping deploy files 2 kevinzheng&quot;</div><div class="line">cp -r public/* ../kevinzheng/</div><div class="line">git add .</div><div class="line">cmContent=提交博客内容$(date +%s)</div><div class="line">git commit -m $cmContent</div><div class="line">git push</div><div class="line">#git commit kevinzheng</div><div class="line">cd ../kevinzheng</div><div class="line">git add .</div><div class="line">cmContent=提交博客内容$(date +%s)</div><div class="line">git commit -m $cmContent</div><div class="line">git push</div><div class="line">exit 0</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>脚本解释</p>
@@ -305,7 +649,7 @@
 <li>提交并推送博客原始内容到coding服务器</li>
 </ol>
 <p>以上这些就是使用coding做静态博客的大功率内容，如果还想有个备份在daocloud上也部署一个顺便学习docker可以看看下面的daocloud 部署静态博客章节</p>
-<h2 id="daocloud-部署静态博客"><a href="#daocloud-部署静态博客" class="headerlink" title="daocloud 部署静态博客"></a>daocloud 部署静态博客</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>coding 的个人博客项目中source目录加入Dockerfile 即可。<br>hexo生成静态内容的时候会自动把Source下的内容放到public中即个人pages工程根目录会有Dockerfile ，daocloud进行持续集成构建镜像会用到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure></p>
+<h2 id="daocloud-部署静态博客"><a href="#daocloud-部署静态博客" class="headerlink" title="daocloud 部署静态博客"></a>daocloud 部署静态博客</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>coding 的个人博客项目中source目录加入Dockerfile 即可。<br>hexo生成静态内容的时候会自动把Source下的内容放到public中即个人pages工程根目录会有Dockerfile ，daocloud进行持续集成构建镜像会用到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">FROM daocloud.io/nginx</div><div class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</div><div class="line"></div><div class="line">COPY . /usr/share/nginx/html</div><div class="line">EXPOSE 80</div></pre></td></tr></table></figure></p>
 <h3 id="代码构建"><a href="#代码构建" class="headerlink" title="代码构建"></a>代码构建</h3><p><img src="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png" alt="daocloud代码构建个功能截图"><br>在代码构建功能中选择coding 认证登陆之后选择个人pages项目<br>然后设置镜像构建和持续集成<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_001.png" alt="此处输入图片的描述"><br>触发规则<br>当代码仓库发生下面的操作时会触发镜像构建<br>提交tag<br>提交代码到分支: coding-pages 修改</p>
 <h3 id="镜像部署"><a href="#镜像部署" class="headerlink" title="镜像部署"></a>镜像部署</h3><p>镜像构建完成之后可以作为应用直接发布，基本默认配置就好改一下自己喜欢且没被占用的子域名即可，发布里设置自动发布<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_002.png" alt="此处输入图片的描述"><br>以后本地博客写完之后自动发布到coding 然后自动触发daocloud 持续集成并构建成镜像 发布到daocloud的 daoapp域名下</p>
 
@@ -314,15 +658,18 @@
       
     </div>
     
-    <div>
-      
-    </div>
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -332,6 +679,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -339,13 +690,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2016/05/05/jenkins-weblogic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
 
     
       <header class="post-header">
@@ -353,27 +718,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/05/05/jenkins-weblogic/" itemprop="url">
-                  jenkins-weblogic
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2016/05/05/jenkins-weblogic/" itemprop="url">jenkins-weblogic</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-05T20:33:17+08:00" content="2016-05-05">
-              2016-05-05
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-05T20:33:17+08:00">
+                2016-05-05
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -381,24 +746,33 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2016/05/05/jenkins-weblogic/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/05/jenkins-weblogic/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/05/jenkins-weblogic/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -497,15 +871,18 @@
       
     </div>
     
-    <div>
-      
-    </div>
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -515,6 +892,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -522,13 +903,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2016/04/25/free-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
 
     
       <header class="post-header">
@@ -536,135 +931,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/04/25/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2016/04/25/free-blog/" itemprop="url">free blog</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T23:19:23+08:00" content="2016-04-25">
-              2016-04-25
-            </time>
-          </span>
-
-          
-
-          
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/25/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/hello-world/" itemprop="commentsCount"></span>
-                </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
               
-                
-                <a class="post-title-link" href="/2016/04/25/free-blog/" itemprop="url">
-                  free blog
-                </a>
+                <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-25T22:52:09+08:00">
+                2016-04-25
+              </time>
             
-          </h1>
-        
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T22:52:09+08:00" content="2016-04-25">
-              2016-04-25
-            </time>
+            
+
+            
           </span>
 
           
@@ -672,24 +959,33 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2016/04/25/free-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/free-blog/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/free-blog/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -706,7 +1002,7 @@
 <li>设置代码源指定coding的静态项目</li>
 <li>coding 的静态博客项目里面加入Dockerfile</li>
 </ol>
-<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
+<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">FROM daocloud.io/nginx</div><div class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</div><div class="line">COPY . /usr/share/nginx/html</div><div class="line">EXPOSE 80</div></pre></td></tr></table></figure>
 <p>这里只是介绍个大概，后续在写一片详细的介绍利用hexo+coding+daocloud持续构建静态博客的博文，这里先挖个坑后面慢慢填</p>
 <ol>
 <li>hexo+coding+daocloud持续继承部署静态博客</li>
@@ -719,15 +1015,18 @@
       
     </div>
     
-    <div>
-      
-    </div>
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -737,6 +1036,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -744,13 +1047,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2015/07/17/hibernate/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
 
     
       <header class="post-header">
@@ -758,38 +1075,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/07/17/hibernate/" itemprop="url">
-                  tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/07/17/hibernate/" itemprop="url">tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-17T00:49:53+08:00" content="2015-07-17">
-              2015-07-17
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-17T00:49:53+08:00">
+                2015-07-17
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/default/" itemprop="url" rel="index">
                     <span itemprop="name">default</span>
                   </a>
@@ -797,7 +1118,6 @@
 
                 
                 
-
               
             </span>
           
@@ -805,24 +1125,33 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/17/hibernate/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/17/hibernate/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/17/hibernate/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -844,15 +1173,18 @@
       
     </div>
     
-    <div>
-      
-    </div>
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -862,6 +1194,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -869,13 +1205,27 @@
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2015/07/04/jeePatchExp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
 
     
       <header class="post-header">
@@ -883,38 +1233,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/07/04/jeePatchExp/" itemprop="url">
-                  jeePatchExp补丁导出1.0
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/07/04/jeePatchExp/" itemprop="url">jeePatchExp补丁导出1.0</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-04T13:50:17+08:00" content="2015-07-04">
-              2015-07-04
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-04T13:50:17+08:00">
+                2015-07-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/tools/" itemprop="url" rel="index">
                     <span itemprop="name">tools</span>
                   </a>
@@ -922,7 +1276,6 @@
 
                 
                 
-
               
             </span>
           
@@ -930,24 +1283,33 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/04/jeePatchExp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/jeePatchExp/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/jeePatchExp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1034,15 +1396,18 @@ public void expInnerClass(String src,String desc,String rName){
       
     </div>
     
-    <div>
-      
-    </div>
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1052,6 +1417,10 @@ public void expInnerClass(String src,String desc,String rName){
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1059,13 +1428,27 @@ public void expInnerClass(String src,String desc,String rName){
       
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2015/07/04/tools-list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彦润他爹的博客">
+    </span>
 
     
       <header class="post-header">
@@ -1073,38 +1456,42 @@ public void expInnerClass(String src,String desc,String rName){
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/07/04/tools-list/" itemprop="url">
-                  tools list
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/07/04/tools-list/" itemprop="url">tools list</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-04T13:24:19+08:00" content="2015-07-04">
-              2015-07-04
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-04T13:24:19+08:00">
+                2015-07-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/tools/" itemprop="url" rel="index">
                     <span itemprop="name">tools</span>
                   </a>
@@ -1112,7 +1499,6 @@ public void expInnerClass(String src,String desc,String rName){
 
                 
                 
-
               
             </span>
           
@@ -1120,24 +1506,33 @@ public void expInnerClass(String src,String desc,String rName){
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/04/tools-list/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/tools-list/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/tools-list/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1158,15 +1553,18 @@ public void expInnerClass(String src,String desc,String rName){
       
     </div>
     
-    <div>
-      
-    </div>
+    
+    
 
-    <div>
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1176,6 +1574,10 @@ public void expInnerClass(String src,String desc,String rName){
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1204,41 +1606,51 @@ public void expInnerClass(String src,String desc,String rName){
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif"
                alt="kevinzheng" />
           <p class="site-author-name" itemprop="name">kevinzheng</p>
-          <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+           
+              <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">20</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1256,11 +1668,14 @@ public void expInnerClass(String src,String desc,String rName){
         
 
         
-        <div class="links-of-blogroll motion-element">
-          
-        </div>
+        
+
+        
+
 
       </section>
+
+      
 
       
 
@@ -1277,15 +1692,16 @@ public void expInnerClass(String src,String desc,String rName){
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">kevinzheng</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -1296,13 +1712,19 @@ public void expInnerClass(String src,String desc,String rName){
 </div>
 
 
+        
 
+        
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1325,43 +1747,56 @@ public void expInnerClass(String src,String desc,String rName){
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
   
 
   
 
-  
 
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -1386,6 +1821,24 @@ public void expInnerClass(String src,String desc,String rName){
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
@@ -1393,7 +1846,11 @@ public void expInnerClass(String src,String desc,String rName){
 
 
   
+
   
+
+  
+
   
 
   
