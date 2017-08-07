@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog,free," />
+  <meta name="keywords" content="java,文件复制,bufferio,局域网共享," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
-<meta name="keywords" content="blog,free">
+<meta name="description" content="java 文件拷贝先说结论：java进行文件拷贝，测试了以下几种方法，得到文件拷贝速度的差别。 拷贝速度排序如下：  nio 内存映射 nio file chanel buffer io  但是如果是局域网拷贝的话 反而是bufferio 更快。（基于本机环境测试结果） 环境信息：   win7 64位, Intel® Core™ i7-3630QM CPU @ 2.40GHz × 8 , 8G">
+<meta name="keywords" content="java,文件复制,bufferio,局域网共享">
 <meta property="og:type" content="article">
-<meta property="og:title" content="free blog">
-<meta property="og:url" content="http://www.yoursite.com/2016/04/25/free-blog/index.html">
+<meta property="og:title" content="java文件复制">
+<meta property="og:url" content="http://www.yoursite.com/2017/08/07/java文件复制/index.html">
 <meta property="og:site_name" content="彦润他爹的博客">
-<meta property="og:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
+<meta property="og:description" content="java 文件拷贝先说结论：java进行文件拷贝，测试了以下几种方法，得到文件拷贝速度的差别。 拷贝速度排序如下：  nio 内存映射 nio file chanel buffer io  但是如果是局域网拷贝的话 反而是bufferio 更快。（基于本机环境测试结果） 环境信息：   win7 64位, Intel® Core™ i7-3630QM CPU @ 2.40GHz × 8 , 8G">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-05T00:30:20.079Z">
+<meta property="og:updated_time" content="2017-08-07T02:35:16.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="free blog">
-<meta name="twitter:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
+<meta name="twitter:title" content="java文件复制">
+<meta name="twitter:description" content="java 文件拷贝先说结论：java进行文件拷贝，测试了以下几种方法，得到文件拷贝速度的差别。 拷贝速度排序如下：  nio 内存映射 nio file chanel buffer io  但是如果是局域网拷贝的话 反而是bufferio 更快。（基于本机环境测试结果） 环境信息：   win7 64位, Intel® Core™ i7-3630QM CPU @ 2.40GHz × 8 , 8G">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.yoursite.com/2016/04/25/free-blog/"/>
+  <link rel="canonical" href="http://www.yoursite.com/2017/08/07/java文件复制/"/>
 
 
 
 
 
-  <title>free blog | 彦润他爹的博客</title>
+  <title>java文件复制 | 彦润他爹的博客</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2016/04/25/free-blog/">
+    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2017/08/07/java文件复制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kevinzheng">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">free blog</h1>
+          <h1 class="post-title" itemprop="name headline">java文件复制</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-25T22:52:09+08:00">
-                2016-04-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-07T10:16:56+08:00">
+                2017-08-07
               </time>
             
 
@@ -311,8 +311,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/04/25/free-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/free-blog/" itemprop="commentCount"></span>
+                <a href="/2017/08/07/java文件复制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/07/java文件复制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -340,21 +340,17 @@
       
 
       
-        <h2 id="用过的免费静态blog的平台"><a href="#用过的免费静态blog的平台" class="headerlink" title="用过的免费静态blog的平台"></a>用过的免费静态blog的平台</h2><p>最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当<br>后来发现了<a href="https://coding.net" target="_blank" rel="external">coding</a> 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud</p>
-<h3 id="DaoCloud"><a href="#DaoCloud" class="headerlink" title="DaoCloud"></a>DaoCloud</h3><p>最开始是通过coding 了解到docker 的，然后从<a href="https://www.daocloud.io/" target="_blank" rel="external">daocloud</a> 上注册了帐号开始体验docker的神奇和daocloud上免费网络部署资源的。<br>在daocloud上利用代码构建镜像并部署自己的应用，到目前为止还可以免费使用的两个弹性资源。<br>下面介绍一下假设已经开通coding pages的同时如何在daocloud上部署自己的静态博客</p>
+        <h1 id="java-文件拷贝"><a href="#java-文件拷贝" class="headerlink" title="java 文件拷贝"></a>java 文件拷贝</h1><h3 id="先说结论："><a href="#先说结论：" class="headerlink" title="先说结论："></a>先说结论：</h3><p>java进行文件拷贝，测试了以下几种方法，得到文件拷贝速度的差别。</p>
+<p>拷贝速度排序如下：</p>
 <ol>
-<li>注册daocloud帐号</li>
-<li>代码构建里新建项目</li>
-<li>设置代码源指定coding的静态项目</li>
-<li>coding 的静态博客项目里面加入Dockerfile</li>
+<li>nio 内存映射</li>
+<li>nio file chanel</li>
+<li>buffer io</li>
 </ol>
-<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">FROM daocloud.io/nginx</div><div class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</div><div class="line">COPY . /usr/share/nginx/html</div><div class="line">EXPOSE 80</div></pre></td></tr></table></figure>
-<p>这里只是介绍个大概，后续在写一片详细的介绍利用hexo+coding+daocloud持续构建静态博客的博文，这里先挖个坑后面慢慢填</p>
-<ol>
-<li>hexo+coding+daocloud持续继承部署静态博客</li>
-<li>hexo deploy在网站包含非其他部分静态内容时的坑</li>
-<li>自己写脚本自动部署静态博客，以及用git项目上进行markdown文章和hexo项目进行备份的</li>
-</ol>
+<p>但是如果是局域网拷贝的话 反而是bufferio 更快。（基于本机环境测试结果）</p>
+<h3 id="环境信息："><a href="#环境信息：" class="headerlink" title="环境信息："></a>环境信息：</h3><p>   win7 64位, Intel® Core™ i7-3630QM CPU @ 2.40GHz × 8 , 8G 内存 ,磁盘：Samsung SSD 850 EVO 250GB (EMT01B6Q)</p>
+<h4 id="ps"><a href="#ps" class="headerlink" title="ps:"></a>ps:</h4><p>当然一般情况下apache 的io工具包直接使够用：<code>org.apache.commons.io.FileUtils</code>;</p>
+<p>测试代码 <a href="https://gist.coding.net/u/kevinzheng/26c337358be94c3e8286b27469418a7a" target="_blank" rel="external">coding Gist地址</a></p>
 
       
     </div>
@@ -372,9 +368,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag"># blog</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
-            <a href="/tags/free/" rel="tag"># free</a>
+            <a href="/tags/文件复制/" rel="tag"># 文件复制</a>
+          
+            <a href="/tags/bufferio/" rel="tag"># bufferio</a>
+          
+            <a href="/tags/局域网共享/" rel="tag"># 局域网共享</a>
           
         </div>
       
@@ -387,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/17/hibernate/" rel="next" title="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数">
-                <i class="fa fa-chevron-left"></i> tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数
+              <a href="/2017/08/05/vue-coding-pp/" rel="next" title="vue版coding冒泡广场demo">
+                <i class="fa fa-chevron-left"></i> vue版coding冒泡广场demo
               </a>
             
           </div>
@@ -396,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/05/jenkins-weblogic/" rel="prev" title="jenkins-weblogic">
-                jenkins-weblogic <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -429,8 +425,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/25/free-blog/"
-           data-title="free blog" data-url="http://www.yoursite.com/2016/04/25/free-blog/">
+      <div class="ds-thread" data-thread-key="2017/08/07/java文件复制/"
+           data-title="java文件复制" data-url="http://www.yoursite.com/2017/08/07/java文件复制/">
       </div>
     
   </div>
@@ -537,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用过的免费静态blog的平台"><span class="nav-number">1.</span> <span class="nav-text">用过的免费静态blog的平台</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DaoCloud"><span class="nav-number">1.1.</span> <span class="nav-text">DaoCloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dockerfile内容"><span class="nav-number">1.2.</span> <span class="nav-text">Dockerfile内容</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java-文件拷贝"><span class="nav-number">1.</span> <span class="nav-text">java 文件拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先说结论："><span class="nav-number">1.0.1.</span> <span class="nav-text">先说结论：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境信息："><span class="nav-number">1.0.2.</span> <span class="nav-text">环境信息：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ps"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">ps:</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
