@@ -98,8 +98,8 @@
 <meta name="keywords" content="blog,free">
 <meta property="og:type" content="article">
 <meta property="og:title" content="free blog">
-<meta property="og:url" content="http://www.yoursite.com/2016/04/25/free-blog/index.html">
-<meta property="og:site_name" content="彦润他爹的博客">
+<meta property="og:url" content="https://www.yoursite.com/2016/04/25/free-blog/index.html">
+<meta property="og:site_name" content="郑瑞召的博客">
 <meta property="og:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-07T17:24:00.355Z">
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://www.yoursite.com/2016/04/25/free-blog/"/>
+  <link rel="canonical" href="https://www.yoursite.com/2016/04/25/free-blog/"/>
 
 
 
 
 
-  <title>free blog | 彦润他爹的博客</title>
+  <title>free blog | 郑瑞召的博客</title>
   
 
 
@@ -176,7 +176,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">彦润他爹的博客</span>
+        <span class="site-title">郑瑞召的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.yoursite.com/2016/04/25/free-blog/">
+    <link itemprop="mainEntityOfPage" href="https://www.yoursite.com/2016/04/25/free-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kevinzheng">
@@ -272,7 +272,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="彦润他爹的博客">
+      <meta itemprop="name" content="郑瑞召的博客">
     </span>
 
     
@@ -430,7 +430,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/04/25/free-blog/"
-           data-title="free blog" data-url="http://www.yoursite.com/2016/04/25/free-blog/">
+           data-title="free blog" data-url="https://www.yoursite.com/2016/04/25/free-blog/">
       </div>
     
   </div>
@@ -710,6 +710,22 @@ Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pag
 
 
 
+<!-- coding 评论 -->
+<link rel="stylesheet" href="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/default.css">
+<script type="text/javascript" src="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/gitment.min.js"></script>
+<script>
+    var clientId = '0de8f60f8e2aeed0442f323d6a7b5784'
+    var clientSecret = 'b01fb6b18c4f57ecca8285c2ade9cc8a4a3d3cac'
+    var gitment = new Gitment({
+      owner: 'kevinzheng',
+      repo: 'coding-comments',
+      oauth: {
+        client_id: clientId,
+        client_secret: clientSecret,
+      },
+    })
+    gitment.render('comments')
+  </script>
 
   
 
@@ -731,5 +747,6 @@ Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pag
 
   <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/loveclick.js"></script>
+
 </body>
 </html>
