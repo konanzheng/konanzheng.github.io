@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="jenkins,微信,插件," />
 
 
 
@@ -94,16 +94,18 @@
 
 
 
-<meta name="description" content="世上只有2种人，懂二进制的和不懂得">
-<meta property="og:type" content="website">
-<meta property="og:title" content="郑瑞召的博客">
-<meta property="og:url" content="https://www.yoursite.com/tags/tools/index.html">
+<meta name="description" content="jenkins通知默认有邮件，但是大部分时间都不喜欢看邮件，也不喜欢邮箱app。所以想用即时通讯的方式进行jenkins构建项目结果的通知。dingding 有一个开源jenkinst通知插件非常简单，就拿来稍微改造下做了个微信的通知插件。 项目情况coding项目地址 插件使用说明需要配置 appid 、 appSecret 、 模板消息的 id,和 接收人openid多个openid用英文逗号">
+<meta name="keywords" content="jenkins,微信,插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jenkins微信通知插件">
+<meta property="og:url" content="https://www.yoursite.com/2017/10/13/jenkins微信通知插件/index.html">
 <meta property="og:site_name" content="郑瑞召的博客">
-<meta property="og:description" content="世上只有2种人，懂二进制的和不懂得">
+<meta property="og:description" content="jenkins通知默认有邮件，但是大部分时间都不喜欢看邮件，也不喜欢邮箱app。所以想用即时通讯的方式进行jenkins构建项目结果的通知。dingding 有一个开源jenkinst通知插件非常简单，就拿来稍微改造下做了个微信的通知插件。 项目情况coding项目地址 插件使用说明需要配置 appid 、 appSecret 、 模板消息的 id,和 接收人openid多个openid用英文逗号">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-13T02:19:16.113Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="郑瑞召的博客">
-<meta name="twitter:description" content="世上只有2种人，懂二进制的和不懂得">
+<meta name="twitter:title" content="jenkins微信通知插件">
+<meta name="twitter:description" content="jenkins通知默认有邮件，但是大部分时间都不喜欢看邮件，也不喜欢邮箱app。所以想用即时通讯的方式进行jenkins构建项目结果的通知。dingding 有一个开源jenkinst通知插件非常简单，就拿来稍微改造下做了个微信的通知插件。 项目情况coding项目地址 插件使用说明需要配置 appid 、 appSecret 、 模板消息的 id,和 接收人openid多个openid用英文逗号">
 
 
 
@@ -132,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yoursite.com/tags/tools/"/>
+  <link rel="canonical" href="https://www.yoursite.com/2017/10/13/jenkins微信通知插件/"/>
 
 
 
 
 
-  <title>标签: tools | 郑瑞召的博客</title>
+  <title>jenkins微信通知插件 | 郑瑞召的博客</title>
   
 
 
@@ -163,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,82 +249,175 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>tools<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yoursite.com/2017/10/13/jenkins微信通知插件/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郑瑞召的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2015/07/04/jeePatchExp/" itemprop="url">
-              
-                <span itemprop="name">jeePatchExp补丁导出1.0</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">jenkins微信通知插件</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-07-04T13:50:17+08:00"
-              content="2015-07-04" >
-          07-04
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-13T10:03:58+08:00">
+                2017-10-13
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/13/jenkins微信通知插件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/13/jenkins微信通知插件/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2015/07/04/tools-list/" itemprop="url">
-              
-                <span itemprop="name">tools list</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-07-04T13:24:19+08:00"
-              content="2015-07-04" >
-          07-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p>jenkins通知默认有邮件，但是大部分时间都不喜欢看邮件，也不喜欢邮箱app。所以想用即时通讯的方式进行jenkins构建项目结果的通知。dingding 有一个开源jenkinst通知插件非常简单，就拿来稍微改造下做了个微信的通知插件。</p>
+<h3 id="项目情况"><a href="#项目情况" class="headerlink" title="项目情况"></a>项目情况</h3><p><a href="https://coding.net/u/kevinzheng/p/wechat-notifications/git" target="_blank" rel="external">coding项目地址</a></p>
+<h3 id="插件使用说明"><a href="#插件使用说明" class="headerlink" title="插件使用说明"></a>插件使用说明</h3><p>需要配置 appid 、 appSecret 、 模板消息的 id,和 接收人openid多个openid用英文逗号分割即可</p>
+<p>模板目前是固定的，可以根据自己需求修改</p>
+<pre><code>{{first.DATA}}
+项目名称：{{project.DATA}}
+构建编号：{{build.DATA}}
+构建结果：{{result.DATA}}
+概要情况：{{summary.DATA}}
+持续时间: {{duration.DATA}}
+{{remark.DATA}}
+</code></pre><p><a href="https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">微信测试号地址</a></p>
+<h3 id="源码构建"><a href="#源码构建" class="headerlink" title="源码构建"></a>源码构建</h3><p>maven构建</p>
+<p><code>mvn package --settings=./settings.xml</code></p>
+<p><a href="https://github.com/jenkinsci/dingding-notifications-plugin" target="_blank" rel="external">dingding-notifications插件github地址</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jenkins/" rel="tag"># jenkins</a>
+          
+            <a href="/tags/微信/" rel="tag"># 微信</a>
+          
+            <a href="/tags/插件/" rel="tag"># 插件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/28/weixin/" rel="next" title="单点登录集成微信扫码登录">
+                <i class="fa fa-chevron-left"></i> 单点登录集成微信扫码登录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -330,6 +425,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/10/13/jenkins微信通知插件/"
+           data-title="jenkins微信通知插件" data-url="https://www.yoursite.com/2017/10/13/jenkins微信通知插件/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -350,8 +453,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif"
@@ -413,6 +525,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目情况"><span class="nav-number">1.</span> <span class="nav-text">项目情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件使用说明"><span class="nav-number">2.</span> <span class="nav-text">插件使用说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码构建"><span class="nav-number">3.</span> <span class="nav-text">源码构建</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -530,10 +658,10 @@ Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pag
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
