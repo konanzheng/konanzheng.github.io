@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -27,7 +34,12 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -59,68 +71,76 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <meta name="keywords" content="java,hibernate,tapestry," />
 
 
 
 
 
 
-<meta name="description" content="记录一个问题解决方案
 
-tapestry中service的配置tapestry通过AppModule 或其他Module 类处理service 的bind 和configure配置,配置的方法入口即:contribute+服务名，数据库配置的方法就是：contributeHibernateSessionSource 。
-tapestry管理的hibernate 配置HibernateConfigu">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="记录一个问题解决方案  tapestry中service的配置tapestry通过AppModule 或其他Module 类处理service 的bind 和configure配置,配置的方法入口即:contribute+服务名，数据库配置的方法就是：contributeHibernateSessionSource 。 tapestry管理的hibernate 配置HibernateConfigu">
+<meta name="keywords" content="java,hibernate,tapestry">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数">
-<meta property="og:url" content="http://yoursite.com/2015/07/17/hibernate/index.html">
-<meta property="og:site_name" content="kevinzheng's 博客">
-<meta property="og:description" content="记录一个问题解决方案
-
-tapestry中service的配置tapestry通过AppModule 或其他Module 类处理service 的bind 和configure配置,配置的方法入口即:contribute+服务名，数据库配置的方法就是：contributeHibernateSessionSource 。
-tapestry管理的hibernate 配置HibernateConfigu">
-<meta property="og:updated_time" content="2016-04-21T14:22:14.000Z">
+<meta property="og:url" content="https://www.yoursite.com/2015/07/17/hibernate/index.html">
+<meta property="og:site_name" content="郑瑞召的博客">
+<meta property="og:description" content="记录一个问题解决方案  tapestry中service的配置tapestry通过AppModule 或其他Module 类处理service 的bind 和configure配置,配置的方法入口即:contribute+服务名，数据库配置的方法就是：contributeHibernateSessionSource 。 tapestry管理的hibernate 配置HibernateConfigu">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-07T17:24:00.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数">
-<meta name="twitter:description" content="记录一个问题解决方案
-
-tapestry中service的配置tapestry通过AppModule 或其他Module 类处理service 的bind 和configure配置,配置的方法入口即:contribute+服务名，数据库配置的方法就是：contributeHibernateSessionSource 。
-tapestry管理的hibernate 配置HibernateConfigu">
+<meta name="twitter:description" content="记录一个问题解决方案  tapestry中service的配置tapestry通过AppModule 或其他Module 类处理service 的bind 和configure配置,配置的方法入口即:contribute+服务名，数据库配置的方法就是：contributeHibernateSessionSource 。 tapestry管理的hibernate 配置HibernateConfigu">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数 | kevinzheng's 博客 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="https://www.yoursite.com/2015/07/17/hibernate/"/>
+
+
+
+
+
+  <title>tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数 | 郑瑞召的博客</title>
   
 
 
@@ -131,35 +151,47 @@ tapestry管理的hibernate 配置HibernateConfigu">
 
 
 
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">kevinzheng's 博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">郑瑞召的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -172,7 +204,7 @@ tapestry管理的hibernate 配置HibernateConfigu">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -180,9 +212,9 @@ tapestry管理的hibernate 配置HibernateConfigu">
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -190,9 +222,9 @@ tapestry管理的hibernate 配置HibernateConfigu">
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -205,6 +237,8 @@ tapestry管理的hibernate 配置HibernateConfigu">
 
   
 </nav>
+
+
 
  </div>
     </header>
@@ -219,49 +253,68 @@ tapestry管理的hibernate 配置HibernateConfigu">
     
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yoursite.com/2015/07/17/hibernate/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郑瑞召的博客">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-17T00:49:53+08:00" content="2015-07-17">
-              2015-07-17
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-17T00:49:53+08:00">
+                2015-07-17
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/default/" itemprop="url" rel="index">
                     <span itemprop="name">default</span>
                   </a>
@@ -269,7 +322,6 @@ tapestry管理的hibernate 配置HibernateConfigu">
 
                 
                 
-
               
             </span>
           
@@ -277,25 +329,33 @@ tapestry管理的hibernate 配置HibernateConfigu">
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/17/hibernate/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/17/hibernate/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/17/hibernate/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -313,19 +373,30 @@ tapestry管理的hibernate 配置HibernateConfigu">
       
     </div>
     
-    <div>
-      
-        
-      
-    </div>
+    
+    
 
-    <div>
-      
-        
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/hibernate/" rel="tag"># hibernate</a>
+          
+            <a href="/tags/tapestry/" rel="tag"># tapestry</a>
+          
+        </div>
+      
+
+      
+      
       
 
       
@@ -338,10 +409,12 @@ tapestry管理的hibernate 配置HibernateConfigu">
             
           </div>
 
+          <span class="post-nav-divider"></span>
+
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/21/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/25/free-blog/" rel="prev" title="free blog">
+                free blog <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -351,6 +424,10 @@ tapestry管理的hibernate 配置HibernateConfigu">
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -369,7 +446,7 @@ tapestry管理的hibernate 配置HibernateConfigu">
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/07/17/hibernate/"
-           data-title="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数" data-url="http://yoursite.com/2015/07/17/hibernate/">
+           data-title="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数" data-url="https://www.yoursite.com/2015/07/17/hibernate/">
       </div>
     
   </div>
@@ -388,6 +465,7 @@ tapestry管理的hibernate 配置HibernateConfigu">
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -403,35 +481,44 @@ tapestry管理的hibernate 配置HibernateConfigu">
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif"
                alt="kevinzheng" />
           <p class="site-author-name" itemprop="name">kevinzheng</p>
-          <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+           
+              <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">1</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -451,19 +538,29 @@ tapestry管理的hibernate 配置HibernateConfigu">
         
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#以及其他情况"><span class="nav-number">1.</span> <span class="nav-text">以及其他情况</span></a></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -479,15 +576,19 @@ tapestry管理的hibernate 配置HibernateConfigu">
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">kevinzheng</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+<!-- 
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+-->
+Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
 </div>
 
 <div class="theme-info">
@@ -495,7 +596,9 @@ tapestry管理的hibernate 配置HibernateConfigu">
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
+  | 
 </div>
+
 
         
 
@@ -503,9 +606,13 @@ tapestry管理的hibernate 配置HibernateConfigu">
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -528,47 +635,56 @@ tapestry管理的hibernate 配置HibernateConfigu">
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
-  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -593,6 +709,40 @@ tapestry管理的hibernate 配置HibernateConfigu">
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- coding 评论 -->
+<link rel="stylesheet" href="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/default.css">
+<script type="text/javascript" src="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/gitment.min.js"></script>
+<script>
+    var clientId = '0de8f60f8e2aeed0442f323d6a7b5784'
+    var clientSecret = 'b01fb6b18c4f57ecca8285c2ade9cc8a4a3d3cac'
+    var gitment = new Gitment({
+      owner: 'kevinzheng',
+      repo: 'coding-comments',
+      oauth: {
+        client_id: clientId,
+        client_secret: clientSecret,
+      },
+    })
+    gitment.render('comments')
+  </script>
+
   
 
 
@@ -600,15 +750,19 @@ tapestry管理的hibernate 配置HibernateConfigu">
 
 
   
+
   
+
   
 
   
 
   
-<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
-</script>
 
+  
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/loveclick.js"></script>
 
 </body>
 </html>

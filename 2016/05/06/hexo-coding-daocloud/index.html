@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo,coding,daocloud,docker," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="利用hexo+coding+daocloud持续构建静态博客 关于hexohexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点  nodejs 、npm 安装完之后使用taobao的npm镜像 创建本地博客目录,然后进入执行hexo init 安装漂亮的next主题 git clone https://github.com/iissnan/hexo-theme-ne">
+<meta name="keywords" content="hexo,coding,daocloud,docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo+coding+daocloud">
+<meta property="og:url" content="https://www.yoursite.com/2016/05/06/hexo-coding-daocloud/index.html">
+<meta property="og:site_name" content="郑瑞召的博客">
+<meta property="og:description" content="利用hexo+coding+daocloud持续构建静态博客 关于hexohexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点  nodejs 、npm 安装完之后使用taobao的npm镜像 创建本地博客目录,然后进入执行hexo init 安装漂亮的next主题 git clone https://github.com/iissnan/hexo-theme-ne">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png">
+<meta property="og:image" content="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_001.png">
+<meta property="og:image" content="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_002.png">
+<meta property="og:updated_time" content="2017-08-07T17:24:00.356Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo+coding+daocloud">
+<meta name="twitter:description" content="利用hexo+coding+daocloud持续构建静态博客 关于hexohexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点  nodejs 、npm 安装完之后使用taobao的npm镜像 创建本地博客目录,然后进入执行hexo init 安装漂亮的next主题 git clone https://github.com/iissnan/hexo-theme-ne">
+<meta name="twitter:image" content="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.yoursite.com/2016/05/06/hexo-coding-daocloud/"/>
+
+
+
+
+
+  <title>hexo+coding+daocloud | 郑瑞召的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">郑瑞召的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yoursite.com/2016/05/06/hexo-coding-daocloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郑瑞召的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hexo+coding+daocloud</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-06T13:32:33+08:00">
+                2016-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/05/06/hexo-coding-daocloud/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/06/hexo-coding-daocloud/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>利用hexo+coding+daocloud持续构建静态博客</p>
+<h2 id="关于hexo"><a href="#关于hexo" class="headerlink" title="关于hexo"></a>关于hexo</h2><p>hexo的安装以及博客的创建不用说，网络上到处都是教程什么的，这里只记录相关的关键点</p>
+<ol>
+<li>nodejs 、npm 安装完之后使用<a href="http://npm.taobao.org/" target="_blank" rel="external">taobao的npm镜像</a></li>
+<li>创建本地博客目录,然后进入执行<strong>hexo init</strong></li>
+<li>安装漂亮的next主题 git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</li>
+<li>注意在source目录中的内容会自动生成到public目录中</li>
+<li>hexo g 生成静态博客内容，启动看看效果 hexo s</li>
+</ol>
+<h2 id="coding"><a href="#coding" class="headerlink" title="coding"></a>coding</h2><ol>
+<li>配置ssh公钥 <a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">帮助文档</a></li>
+<li>开启coding 的pages服务 <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">帮助文档</a></li>
+<li>通过git将静态博客内容（public目录）传到coding 的个人pages工程</li>
+<li>再建一个项目用来存博客原始内容即本地博客目录下的内容</li>
+<li>利用脚本自动发布<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> #!/bin/bash</div><div class="line">echo &quot;生成静态文件&quot;</div><div class="line">hexo g</div><div class="line">echo &quot;coping deploy files 2 kevinzheng&quot;</div><div class="line">cp -r public/* ../kevinzheng/</div><div class="line">git add .</div><div class="line">cmContent=提交博客内容$(date +%s)</div><div class="line">git commit -m $cmContent</div><div class="line">git push</div><div class="line">#git commit kevinzheng</div><div class="line">cd ../kevinzheng</div><div class="line">git add .</div><div class="line">cmContent=提交博客内容$(date +%s)</div><div class="line">git commit -m $cmContent</div><div class="line">git push</div><div class="line">exit 0</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>脚本解释</p>
+<ol>
+<li>hexo g 生存静态内容</li>
+<li>拷贝public下静态内容到coding pages的本地仓库</li>
+<li>利用时间戳定义一个提交评论信息变量cmContent</li>
+<li>git提交并推送pages仓库到coding 服务器</li>
+<li>提交并推送博客原始内容到coding服务器</li>
+</ol>
+<p>以上这些就是使用coding做静态博客的大功率内容，如果还想有个备份在daocloud上也部署一个顺便学习docker可以看看下面的daocloud 部署静态博客章节</p>
+<h2 id="daocloud-部署静态博客"><a href="#daocloud-部署静态博客" class="headerlink" title="daocloud 部署静态博客"></a>daocloud 部署静态博客</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>coding 的个人博客项目中source目录加入Dockerfile 即可。<br>hexo生成静态内容的时候会自动把Source下的内容放到public中即个人pages工程根目录会有Dockerfile ，daocloud进行持续集成构建镜像会用到。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">FROM daocloud.io/nginx</div><div class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</div><div class="line"></div><div class="line">COPY . /usr/share/nginx/html</div><div class="line">EXPOSE 80</div></pre></td></tr></table></figure></p>
+<h3 id="代码构建"><a href="#代码构建" class="headerlink" title="代码构建"></a>代码构建</h3><p><img src="http://7xkes2.com1.z0.glb.clouddn.com/daocloud%E4%BB%A3%E7%A0%81%E6%9E%84%E5%BB%BA.png" alt="daocloud代码构建个功能截图"><br>在代码构建功能中选择coding 认证登陆之后选择个人pages项目<br>然后设置镜像构建和持续集成<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_001.png" alt="此处输入图片的描述"><br>触发规则<br>当代码仓库发生下面的操作时会触发镜像构建<br>提交tag<br>提交代码到分支: coding-pages 修改</p>
+<h3 id="镜像部署"><a href="#镜像部署" class="headerlink" title="镜像部署"></a>镜像部署</h3><p>镜像构建完成之后可以作为应用直接发布，基本默认配置就好改一下自己喜欢且没被占用的子域名即可，发布里设置自动发布<br><img src="http://7xkes2.com1.z0.glb.clouddn.com/Workspace%201_002.png" alt="此处输入图片的描述"><br>以后本地博客写完之后自动发布到coding 然后自动触发daocloud 持续集成并构建成镜像 发布到daocloud的 daoapp域名下</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/coding/" rel="tag"># coding</a>
+          
+            <a href="/tags/daocloud/" rel="tag"># daocloud</a>
+          
+            <a href="/tags/docker/" rel="tag"># docker</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/05/jenkins-weblogic/" rel="next" title="jenkins-weblogic">
+                <i class="fa fa-chevron-left"></i> jenkins-weblogic
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/05/分辨率问题记录/" rel="prev" title="分辨率问题记录">
+                分辨率问题记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/06/hexo-coding-daocloud/"
+           data-title="hexo+coding+daocloud" data-url="https://www.yoursite.com/2016/05/06/hexo-coding-daocloud/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif"
+               alt="kevinzheng" />
+          <p class="site-author-name" itemprop="name">kevinzheng</p>
+           
+              <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于hexo"><span class="nav-number">1.</span> <span class="nav-text">关于hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#coding"><span class="nav-number">2.</span> <span class="nav-text">coding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#daocloud-部署静态博客"><span class="nav-number">3.</span> <span class="nav-text">daocloud 部署静态博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码构建"><span class="nav-number">3.2.</span> <span class="nav-text">代码构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#镜像部署"><span class="nav-number">3.3.</span> <span class="nav-text">镜像部署</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kevinzheng</span>
+</div>
+
+
+<div class="powered-by">
+<!-- 
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+-->
+Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+  | 
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"kevinzheng"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- coding 评论 -->
+<link rel="stylesheet" href="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/default.css">
+<script type="text/javascript" src="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/gitment.min.js"></script>
+<script>
+    var clientId = '0de8f60f8e2aeed0442f323d6a7b5784'
+    var clientSecret = 'b01fb6b18c4f57ecca8285c2ade9cc8a4a3d3cac'
+    var gitment = new Gitment({
+      owner: 'kevinzheng',
+      repo: 'coding-comments',
+      oauth: {
+        client_id: clientId,
+        client_secret: clientSecret,
+      },
+    })
+    gitment.render('comments')
+  </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/loveclick.js"></script>
+
+</body>
+</html>

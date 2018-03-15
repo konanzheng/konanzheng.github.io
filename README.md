@@ -5,7 +5,6 @@ hexo生成的博客，还包含一些前台页面，部署在coding和daocloud�
 
  1. 使用coding的免费开放代码存储服务   
  2. 使用markdwon写作   
- 2. 使用hexo进行markdown到html的转换  
- 3. 使用了nexT主题 
- 4. 使用daocloud的docker免费部署服务    
+ 2. 使用hexo进行markdown到html的转换   
+ 3. 使用daocloud的docker免费部署服务    
 

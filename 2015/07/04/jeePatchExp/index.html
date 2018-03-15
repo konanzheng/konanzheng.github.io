@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -27,7 +34,12 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -59,62 +71,76 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tools," />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <meta name="keywords" content="java,tools,patch,eclipse,web,class," />
 
 
 
 
 
 
-<meta name="description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
-###实现方式最初考虑">
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。   ###实现方式最初考虑">
+<meta name="keywords" content="java,tools,patch,eclipse,web,class">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jeePatchExp补丁导出1.0">
-<meta property="og:url" content="http://yoursite.com/2015/07/04/jeePatchExp/index.html">
-<meta property="og:site_name" content="kevinzheng's 博客">
-<meta property="og:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
-###实现方式最初考虑">
-<meta property="og:updated_time" content="2016-04-22T15:00:28.000Z">
+<meta property="og:url" content="https://www.yoursite.com/2015/07/04/jeePatchExp/index.html">
+<meta property="og:site_name" content="郑瑞召的博客">
+<meta property="og:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。   ###实现方式最初考虑">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-07T17:24:00.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jeePatchExp补丁导出1.0">
-<meta name="twitter:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。  
-###实现方式最初考虑">
+<meta name="twitter:description" content="###背景介绍java web工程开发维护过程中经常遇到的场景就是修改个别后台类或者前台页面，然后打补丁上线，eclipse工具都是关注整体打包跟部署方便的，对补丁导出没有相关好用的方法（或者是我没找到）。所以就做了这个简单的小工具用来导出java编译的class文件和html这些资源文件，目前的版本是针对java web工程的如果是别的类型的项目也可以参考改造后使用。   ###实现方式最初考虑">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> jeePatchExp补丁导出1.0 | kevinzheng's 博客 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="https://www.yoursite.com/2015/07/04/jeePatchExp/"/>
+
+
+
+
+
+  <title>jeePatchExp补丁导出1.0 | 郑瑞召的博客</title>
   
 
 
@@ -125,35 +151,47 @@
 
 
 
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">kevinzheng's 博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">郑瑞召的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -166,7 +204,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -174,9 +212,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -184,9 +222,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -199,6 +237,8 @@
 
   
 </nav>
+
+
 
  </div>
     </header>
@@ -213,49 +253,68 @@
     
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yoursite.com/2015/07/04/jeePatchExp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kevinzheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郑瑞召的博客">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                jeePatchExp补丁导出1.0
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">jeePatchExp补丁导出1.0</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-04T13:50:17+08:00" content="2015-07-04">
-              2015-07-04
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-04T13:50:17+08:00">
+                2015-07-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/tools/" itemprop="url" rel="index">
                     <span itemprop="name">tools</span>
                   </a>
@@ -263,7 +322,6 @@
 
                 
                 
-
               
             </span>
           
@@ -271,25 +329,33 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/04/jeePatchExp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/jeePatchExp/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/04/jeePatchExp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -324,7 +390,7 @@ public void expResource(){
     if(resource_loc!=null&amp;&amp;resource_loc.contains(constants_WEBCONTENT)){
         String desc_temp=resource_loc.substring(resource_loc.indexOf(constants_WEBCONTENT));
         desc=desc_temp.replace(constants_WEBCONTENT, expFolder+File.separatorChar+project_name);
-        makFIleDirs(desc.replace(rName, &quot;&quot;)); 
+        makFIleDirs(desc.replace(rName, &quot;&quot;));
         copyResource(src,desc);
     }
     if(resource_name!=null&amp;&amp;resource_name.endsWith(constants_JAVAFILE)){
@@ -335,7 +401,7 @@ public void expResource(){
         src=project_loc+File.separatorChar+constants_WEBCONTENT+src_temp;
         desc=expFolder+File.separatorChar+project_name+src_temp;
         rName=resource_name.replace(constants_JAVAFILE, constants_CLASSFILE);
-        makFIleDirs(desc.replace(rName, &quot;&quot;)); 
+        makFIleDirs(desc.replace(rName, &quot;&quot;));
         expInnerClass(src, desc, rName);
         copyResource(src,desc);
     }
@@ -363,7 +429,7 @@ public void expInnerClass(String src,String desc,String rName){
 <p>####字符串分割替换<br>替换资源路径字符串时候遇到的问题就是windows 下的路径比如<code>c:\\somethingA\\somethingB\\somethingC</code> 替换的时候不能根据<code>File.separatorChar</code> 直接分割替换，需要用四个反斜杠<code>“\\\\”</code>这一点需要注意。</p>
 <p>####可执行jar<br>window下eclipse外部工具指定jar文件直接作为可执行文件会报错，当时想到的方案是手动写个批处理，将eclipse传递出来的参数再传递给main函数即<code>java -jar jeePatchExp.jar %1 %2 %3 %4 %5</code> 这样。后来经过实验发现在windows下修改jar文件的默认打开方式改成java.exe就好了</p>
 <hr>
-<p>###详细内容及下载<br>具体配置使用方法及详细代码： <a href="https://github.com/konanzheng/jeePatchExpTool" target="_blank" rel="external"> <i class="icon-github"></i>前往查看</a> </p>
+<p>###详细内容及下载<br>具体配置使用方法及详细代码： <a href="https://github.com/konanzheng/jeePatchExpTool" target="_blank" rel="external"> <i class="icon-github"></i>前往查看</a></p>
 <p>编译好的jar包： <a href="http://konanzheng.github.io/filedownload/jeePatchExp.jar" target="_blank" rel="external"> <i class="icon-download-alt"></i>点击下载</a></p>
 <hr>
 <p>eclipse外部工具: Eclipse外部工具:就是调试、运行工具按钮旁边那个运行工具箱图标里面操作的东东，可以定义如何调用外部程序</p>
@@ -372,25 +438,36 @@ public void expInnerClass(String src,String desc,String rName){
       
     </div>
     
-    <div>
-      
-        
-      
-    </div>
+    
+    
 
-    <div>
-      
-        
-      
-    </div>
+    
+
+    
+
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/tools/" rel="tag">#tools</a>
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/tools/" rel="tag"># tools</a>
+          
+            <a href="/tags/patch/" rel="tag"># patch</a>
+          
+            <a href="/tags/eclipse/" rel="tag"># eclipse</a>
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/class/" rel="tag"># class</a>
           
         </div>
+      
+
+      
+      
       
 
       
@@ -403,7 +480,13 @@ public void expInnerClass(String src,String desc,String rName){
             
           </div>
 
+          <span class="post-nav-divider"></span>
+
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/17/hibernate/" rel="prev" title="tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数">
+                tapestry5.3 框架中使用系统环境变量配置hibernate 数据库连接参数 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -412,6 +495,10 @@ public void expInnerClass(String src,String desc,String rName){
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -430,7 +517,7 @@ public void expInnerClass(String src,String desc,String rName){
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/07/04/jeePatchExp/"
-           data-title="jeePatchExp补丁导出1.0" data-url="http://yoursite.com/2015/07/04/jeePatchExp/">
+           data-title="jeePatchExp补丁导出1.0" data-url="https://www.yoursite.com/2015/07/04/jeePatchExp/">
       </div>
     
   </div>
@@ -449,50 +536,51 @@ public void expInnerClass(String src,String desc,String rName){
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-coding-net-production-static.qbox.me/ed0cc43b-3246-4a9c-8eb2-bb578d90c042.gif"
                alt="kevinzheng" />
           <p class="site-author-name" itemprop="name">kevinzheng</p>
-          <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+           
+              <p class="site-description motion-element" itemprop="description">世上只有2种人，懂二进制的和不懂得</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">1</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -512,19 +600,13 @@ public void expInnerClass(String src,String desc,String rName){
         
         
 
+        
+
+
       </section>
 
       
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
+
       
 
     </div>
@@ -540,15 +622,19 @@ public void expInnerClass(String src,String desc,String rName){
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">kevinzheng</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+<!-- 
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+-->
+Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
 </div>
 
 <div class="theme-info">
@@ -556,7 +642,9 @@ public void expInnerClass(String src,String desc,String rName){
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
+  | 
 </div>
+
 
         
 
@@ -564,9 +652,13 @@ public void expInnerClass(String src,String desc,String rName){
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -589,47 +681,56 @@ public void expInnerClass(String src,String desc,String rName){
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
-  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -654,6 +755,40 @@ public void expInnerClass(String src,String desc,String rName){
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- coding 评论 -->
+<link rel="stylesheet" href="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/default.css">
+<script type="text/javascript" src="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.0/gitment.min.js"></script>
+<script>
+    var clientId = '0de8f60f8e2aeed0442f323d6a7b5784'
+    var clientSecret = 'b01fb6b18c4f57ecca8285c2ade9cc8a4a3d3cac'
+    var gitment = new Gitment({
+      owner: 'kevinzheng',
+      repo: 'coding-comments',
+      oauth: {
+        client_id: clientId,
+        client_secret: clientSecret,
+      },
+    })
+    gitment.render('comments')
+  </script>
+
   
 
 
@@ -661,15 +796,19 @@ public void expInnerClass(String src,String desc,String rName){
 
 
   
+
   
+
   
 
   
 
   
-<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
-</script>
 
+  
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/loveclick.js"></script>
 
 </body>
 </html>
