@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="郑瑞召的博客">
 <meta property="og:description" content="遇到一个外接显示器不能设置最佳分辨率的问题。使用linux mint 或者ubuntu 系统都有这个问题。VGA接口连上显示器之后，无法设置最佳显示分辨率1920*1080。网上搜到可以用xrandr 设置。1$  cvt 1920 1080 返回信息：121920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHzModel">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-07T17:24:00.362Z">
+<meta property="og:updated_time" content="2017-08-05T03:36:31.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分辨率问题记录">
 <meta name="twitter:description" content="遇到一个外接显示器不能设置最佳分辨率的问题。使用linux mint 或者ubuntu 系统都有这个问题。VGA接口连上显示器之后，无法设置最佳显示分辨率1920*1080。网上搜到可以用xrandr 设置。1$  cvt 1920 1080 返回信息：121920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHzModel">
@@ -340,12 +340,12 @@
       
 
       
-        <p>遇到一个外接显示器不能设置最佳分辨率的问题。<br>使用linux mint 或者ubuntu 系统都有这个问题。VGA接口连上显示器之后，无法设置最佳显示分辨率1920*1080。<br>网上搜到可以用xrandr 设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  cvt 1920 1080</div></pre></td></tr></table></figure></p>
-<p>返回信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz</div><div class="line">Modeline &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div></pre></td></tr></table></figure></p>
+        <p>遇到一个外接显示器不能设置最佳分辨率的问题。<br>使用linux mint 或者ubuntu 系统都有这个问题。VGA接口连上显示器之后，无法设置最佳显示分辨率1920*1080。<br>网上搜到可以用xrandr 设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  cvt 1920 1080</span><br></pre></td></tr></table></figure></p>
+<p>返回信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz</span><br><span class="line">Modeline &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</span><br></pre></td></tr></table></figure></p>
 <p>这个就是显示模式的具体内容，下面使用xrandr命令把定义这个模式并应用到外接显示器上,VGA-1-1 是我外接的VGA显示器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ xrandr --newmode &quot;1920x1080_60.00&quot; 173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div><div class="line">$ xrandr --addmode VGA-1-1 &quot;1920x1080_60.00&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ xrandr --newmode &quot;1920x1080_60.00&quot; 173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</span><br><span class="line">$ xrandr --addmode VGA-1-1 &quot;1920x1080_60.00&quot;</span><br></pre></td></tr></table></figure>
 <p>最后加上检测逻辑之后，实现自动设置分辨率</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line"></div><div class="line">d=`xrandr | grep &apos;VGA-1-1 connected&apos;`</div><div class="line">if [ -n &quot;$d&quot; ]  </div><div class="line">then  </div><div class="line">	xrandr --newmode  &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div><div class="line">	xrandr --addmode VGA-1-1 &quot;1920x1080_60.00&quot;</div><div class="line">fi</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">d=`xrandr | grep &apos;VGA-1-1 connected&apos;`</span><br><span class="line">if [ -n &quot;$d&quot; ]  </span><br><span class="line">then  </span><br><span class="line">	xrandr --newmode  &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</span><br><span class="line">	xrandr --addmode VGA-1-1 &quot;1920x1080_60.00&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 <p>解释一下脚本的含义：<code>xrandr | grep &#39;VGA-1-1 connected&#39;</code> 这个命令是根据xrandr的输出判断是不是连接了外接显示器“VGA1-1” 如果连接了就设置分辨率。这样可以防止没连接外接显示器的时候执行脚本出错。</p>
 <p>ps:将上边脚本内容复制到~/.profile 中即可实现登录自动设置分辨率</p>
 
@@ -466,7 +466,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -488,7 +488,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -530,7 +530,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="郑瑞召的博客">
 <meta property="og:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-07T17:24:00.355Z">
+<meta property="og:updated_time" content="2017-08-05T00:30:20.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="free blog">
 <meta name="twitter:description" content="用过的免费静态blog的平台最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当后来发现了coding 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud DaoCloud最开始是通过coding 了解到docker 的，然后从daocloud 上注册了帐号开始体">
@@ -340,15 +340,15 @@
       
 
       
-        <h2 id="用过的免费静态blog的平台"><a href="#用过的免费静态blog的平台" class="headerlink" title="用过的免费静态blog的平台"></a>用过的免费静态blog的平台</h2><p>最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当<br>后来发现了<a href="https://coding.net" target="_blank" rel="external">coding</a> 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud</p>
-<h3 id="DaoCloud"><a href="#DaoCloud" class="headerlink" title="DaoCloud"></a>DaoCloud</h3><p>最开始是通过coding 了解到docker 的，然后从<a href="https://www.daocloud.io/" target="_blank" rel="external">daocloud</a> 上注册了帐号开始体验docker的神奇和daocloud上免费网络部署资源的。<br>在daocloud上利用代码构建镜像并部署自己的应用，到目前为止还可以免费使用的两个弹性资源。<br>下面介绍一下假设已经开通coding pages的同时如何在daocloud上部署自己的静态博客</p>
+        <h2 id="用过的免费静态blog的平台"><a href="#用过的免费静态blog的平台" class="headerlink" title="用过的免费静态blog的平台"></a>用过的免费静态blog的平台</h2><p>最早是github上的pages服务，可惜有时候会访问不到而且网速也不稳当<br>后来发现了<a href="https://coding.net" target="_blank" rel="noopener">coding</a> 发现演示功能挺不错的 然而好景不长，演示功能需要消耗码币了，而且推送代码也不送码币了，好在又有pages 可以用。现在记录另一种部署静态博客的方式：daocloud</p>
+<h3 id="DaoCloud"><a href="#DaoCloud" class="headerlink" title="DaoCloud"></a>DaoCloud</h3><p>最开始是通过coding 了解到docker 的，然后从<a href="https://www.daocloud.io/" target="_blank" rel="noopener">daocloud</a> 上注册了帐号开始体验docker的神奇和daocloud上免费网络部署资源的。<br>在daocloud上利用代码构建镜像并部署自己的应用，到目前为止还可以免费使用的两个弹性资源。<br>下面介绍一下假设已经开通coding pages的同时如何在daocloud上部署自己的静态博客</p>
 <ol>
 <li>注册daocloud帐号</li>
 <li>代码构建里新建项目</li>
 <li>设置代码源指定coding的静态项目</li>
 <li>coding 的静态博客项目里面加入Dockerfile</li>
 </ol>
-<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">FROM daocloud.io/nginx</div><div class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</div><div class="line">COPY . /usr/share/nginx/html</div><div class="line">EXPOSE 80</div></pre></td></tr></table></figure>
+<h3 id="Dockerfile内容"><a href="#Dockerfile内容" class="headerlink" title="Dockerfile内容"></a>Dockerfile内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">MAINTAINER kevinzheng &lt;ruizhaozheng@gmail.com&gt;</span><br><span class="line">COPY . /usr/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
 <p>这里只是介绍个大概，后续在写一片详细的介绍利用hexo+coding+daocloud持续构建静态博客的博文，这里先挖个坑后面慢慢填</p>
 <ol>
 <li>hexo+coding+daocloud持续继承部署静态博客</li>
@@ -480,7 +480,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -502,7 +502,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -560,7 +560,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
